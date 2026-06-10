@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SSC Platform · AI 멀티에이전트 자가 보안 컨설팅 플랫폼</title>
+<meta name="description" content="SSC Platform(Self Security Consulting Platform)은 17종의 AI 전문 에이전트가 ISO 27001 기반 보안 컨설팅 6단계와 PTES 기반 Red Team 취약점 분석 8단계를 자동 수행하는 완전 온프레미스 오픈소스 플랫폼입니다." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <button class="menu-toggle neu-raised" id="menuToggle" aria-label="Menu">☰</button>
+
+  <!-- ============== SIDEBAR ============== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-logo neu-pressed">
+        <span class="led led-bl"></span>
+        <span class="led led-gr"></span>
+      </div>
+      <div class="brand-text">
+        <div class="brand-title">WDLAB</div>
+        <div class="brand-subtitle">SSC Platform · 2026.06</div>
+      </div>
+    </div>
+
+    <nav class="nav-sections">
+      <div class="nav-group">
+        <div class="nav-label">시작</div>
+        <a class="nav-item active" href="#hero" data-target="hero"><i class="dot"></i><span>홈 · 개요</span></a>
+        <a class="nav-item" href="#why" data-target="why"><i class="dot"></i><span>왜 SSC 인가</span></a>
+        <a class="nav-item" href="#values" data-target="values"><i class="dot"></i><span>핵심 가치 6가지</span></a>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-label">컨설팅 · Consulting</div>
+        <a class="nav-item" href="#workflow" data-target="workflow"><i class="dot dot-bl"></i><span>ISO 27001 컨설팅 6단계</span></a>
+        <a class="nav-item" href="#standards" data-target="standards"><i class="dot dot-bl"></i><span>준수 표준 · 규정 20+</span></a>
+        <a class="nav-item" href="#reports" data-target="reports"><i class="dot dot-bl"></i><span>자동 보고서 · 산출물</span></a>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-label">Red Team · 취약점 분석</div>
+        <a class="nav-item" href="#redteam" data-target="redteam"><i class="dot dot-rd"></i><span>PTES 8단계 모의해킹</span></a>
+        <a class="nav-item" href="#scanning" data-target="scanning"><i class="dot dot-rd"></i><span>실측 취약점 스캐닝</span></a>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-label">AI 에이전트 · Agents</div>
+        <a class="nav-item" href="#agents" data-target="agents"><i class="dot dot-gr"></i><span>17종 전문 에이전트</span></a>
+        <a class="nav-item" href="#governance" data-target="governance"><i class="dot dot-gr"></i><span>승인 게이트 · 거버넌스</span></a>
+        <a class="nav-item" href="#harness" data-target="harness"><i class="dot dot-gr"></i><span>5계층 하니스</span></a>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-label">시스템 · Tech</div>
+        <a class="nav-item" href="#architecture" data-target="architecture"><i class="dot dot-am"></i><span>아키텍처 · 기술 스택</span></a>
+        <a class="nav-item" href="#status" data-target="status"><i class="dot dot-am"></i><span>구현 현황</span></a>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-label">비전 · Future</div>
+        <a class="nav-item" href="#customers" data-target="customers"><i class="dot"></i><span>4대 고객 유형</span></a>
+        <a class="nav-item" href="#vision" data-target="vision"><i class="dot"></i><span>기대 효과 · 비전</span></a>
+      </div>
+    </nav>
+
+    <div class="sidebar-footer neu-pressed">
+      <div class="status-led"><span class="pulse"></span> 100% On-Prem · Local LLM · Open Source</div>
+    </div>
+  </aside>
+
+  <!-- ============== MAIN ============== -->
+  <main class="content">
+
+    <!-- ===== HERO ===== -->
+    <section id="hero" class="section section-hero">
+      <div class="hero-meta">
+        <span class="chip neu-pressed">SSC Platform · 2026.06</span>
+        <span class="chip neu-pressed">17 AI Agents · 14 Phases · 67+ API</span>
+        <span class="chip neu-pressed">ISO 27001 Annex A 93개 통제항목 전수 구현</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="text-grad-bl">Self Security</span> <span class="text-grad-gr">Consulting</span>
+      </h1>
+      <p class="hero-tagline">
+        보안 컨설턴트를 기다리지 마세요. <b>17종의 AI 전문 에이전트</b>가 우리 조직 안에서<br/>
+        ISO 27001 보안 컨설팅과 Red Team 모의해킹을 <b>처음부터 끝까지</b> 수행합니다.
+      </p>
+      <p class="hero-quote">
+        "수억 원, 수개월이 걸리던 보안 컨설팅을 — 우리 회사 IT팀이, 우리 서버 안에서, 수일 만에."
+      </p>
+
+      <div class="hero-cta">
+        <button class="btn-neu btn-primary" onclick="document.getElementById('workflow').scrollIntoView({behavior:'smooth'})">
+          <span>컨설팅 6단계 살펴보기</span>
+        </button>
+        <button class="btn-neu" onclick="document.getElementById('agents').scrollIntoView({behavior:'smooth'})">
+          <span>17종 AI 에이전트</span>
+        </button>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-card neu-raised">
+          <div class="stat-number text-bl">17</div>
+          <div class="stat-label">AI 전문 에이전트</div>
+        </div>
+        <div class="stat-card neu-raised">
+          <div class="stat-number text-gr">93</div>
+          <div class="stat-label">ISO 27001 통제항목</div>
+        </div>
+        <div class="stat-card neu-raised">
+          <div class="stat-number text-bl">20+</div>
+          <div class="stat-label">준수 표준 · 규정</div>
+        </div>
+        <div class="stat-card neu-raised">
+          <div class="stat-number text-rd">8</div>
+          <div class="stat-label">PTES Red Team 단계</div>
+        </div>
+        <div class="stat-card neu-raised">
+          <div class="stat-number text-gr">67+</div>
+          <div class="stat-label">API 엔드포인트</div>
+        </div>
+        <div class="stat-card neu-raised">
+          <div class="stat-number text-bl">4</div>
+          <div class="stat-label">지원 언어 (한·영·일·중)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHY ===== -->
+    <section id="why" class="section">
+      <div class="section-head">
+        <span class="section-tag">Why SSC</span>
+        <h2>왜 <span class="text-bl">Self Security Consulting</span> 인가?</h2>
+        <p class="section-lead">
+          대부분의 조직은 보안이 중요하다는 것을 알면서도 비용과 시간, 전문 인력의 벽에 막혀 있습니다.
+          SSC Platform은 "외부 컨설팅을 사오는 것"이 아니라 <b>"컨설팅 능력 자체를 조직 내부에 두는 것"</b>으로 문제를 풀었습니다.
+        </p>
+      </div>
+
+      <div class="grid-cards">
+        <div class="pain neu-raised">
+          <span class="pain-num">PROBLEM 01</span>
+          <h4>비싸고 오래 걸린다</h4>
+          <p>전통적인 보안 컨설팅은 연 단위 계약에 수천만 원에서 수억 원이 들고, 착수부터 최종 보고까지 수개월이 걸립니다. 중소·중견기업에게는 사실상 진입이 불가능한 비용 구조입니다.</p>
+        </div>
+        <div class="pain neu-raised">
+          <span class="pain-num">PROBLEM 02</span>
+          <h4>품질이 사람에 따라 다르다</h4>
+          <p>컨설팅 품질은 투입되는 컨설턴트 개인의 역량에 크게 좌우됩니다. 같은 비용을 내고도 어떤 해는 좋은 보고서를, 어떤 해는 형식적인 보고서를 받게 됩니다.</p>
+        </div>
+        <div class="pain neu-raised">
+          <span class="pain-num">PROBLEM 03</span>
+          <h4>끝나면 다시 공백이 생긴다</h4>
+          <p>컨설팅은 끝나는 순간부터 낡기 시작합니다. 새로운 취약점(CVE)과 법규 개정에 대응하려면 매년 재계약해야 하고, 그 사이 기간은 보안 공백으로 남습니다.</p>
+        </div>
+        <div class="pain neu-raised">
+          <span class="pain-num">PROBLEM 04</span>
+          <h4>내부 데이터를 외부에 보여줘야 한다</h4>
+          <p>컨설팅을 받으려면 자산 목록, 네트워크 구성, 취약점 정보 같은 가장 민감한 데이터를 외부 인력에게 공개해야 합니다. 이것 자체가 또 하나의 보안 리스크입니다.</p>
+        </div>
+      </div>
+
+      <div class="compare">
+        <div class="compare-head"><span>비교 항목</span><span>전통적 컨설팅</span><span>SSC Platform</span></div>
+        <div class="compare-row neu-raised"><span class="lbl">비용</span><span class="lo">연 수천만 ~ 수억 원</span><span class="hi">오픈소스 무료 (자체 서버 비용만)</span></div>
+        <div class="compare-row neu-raised"><span class="lbl">기간</span><span class="lo">수개월 ~ 1년</span><span class="hi">수일 (Save/Load로 중단·재개)</span></div>
+        <div class="compare-row neu-raised"><span class="lbl">데이터 위치</span><span class="lo">외부 컨설턴트에 공개</span><span class="hi">100% 사내 서버 (외부 전송 0건)</span></div>
+        <div class="compare-row neu-raised"><span class="lbl">품질 일관성</span><span class="lo">컨설턴트 역량에 좌우</span><span class="hi">표준화된 93개 통제항목 + 품질 검증 에이전트</span></div>
+        <div class="compare-row neu-raised"><span class="lbl">지속성</span><span class="lo">계약 종료 시 공백</span><span class="hi">상시 운영 · CVE/법규 자동 업데이트</span></div>
+      </div>
+    </section>
+
+    <!-- ===== VALUES ===== -->
+    <section id="values" class="section">
+      <div class="section-head">
+        <span class="section-tag">Core Values</span>
+        <h2>SSC Platform의 <span class="text-gr">핵심 가치 6가지</span></h2>
+        <p class="section-lead">
+          SSC Platform은 단순한 체크리스트 도구가 아닙니다. 사람 컨설팅 조직의 역할 구조를
+          AI 에이전트 조직으로 그대로 옮긴 <b>실행 가능한 컨설팅 시스템</b>입니다.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card neu-raised card-hover">
+          <div class="card-icon neu-pressed"><span class="ico-bl">⌂</span></div>
+          <h3>100% 온프레미스 + Local LLM</h3>
+          <p>모든 AI 추론이 사내 서버의 로컬 LLM(Ollama/vLLM)에서 실행됩니다. 자산 목록, 취약점, 진단 결과 등 어떤 데이터도 회사 밖으로 나가지 않습니다. 인터넷이 차단된 망분리 환경에서도 동작합니다.</p>
+        </div>
+        <div class="card neu-raised card-hover">
+          <div class="card-icon neu-pressed"><span class="ico-gr">◈</span></div>
+          <h3>마에스트로 + 17종 에이전트</h3>
+          <p>컨설팅 5종, Red Team 8종, 유지보수 4종의 전문 AI 에이전트가 오케스트레이터(마에스트로)의 지휘 아래 협업합니다. 실제 컨설팅 회사의 PM–컨설턴트–기술리드–QA 조직 구조를 그대로 본떴습니다.</p>
+        </div>
+        <div class="card neu-raised card-hover">
+          <div class="card-icon neu-pressed"><span class="ico-bl">✓</span></div>
+          <h3>사람이 최종 결정한다 (HITL)</h3>
+          <p>중요한 단계마다 승인 게이트가 있습니다. 정부기관은 3인, 금융권은 2인, 일반기업은 1인의 승인 없이는 다음 단계로 넘어가지 않습니다. AI는 분석하고 제안하며, 결정은 항상 사람이 합니다.</p>
+        </div>
+        <div class="card neu-raised card-hover">
+          <div class="card-icon neu-pressed"><span class="ico-rd">⚔</span></div>
+          <h3>방어와 공격을 모두</h3>
+          <p>ISO 27001 기반의 관리체계 컨설팅(방어)과 PTES 8단계 기반의 Red Team 모의해킹(공격)을 한 플랫폼에서 수행합니다. 문서상의 보안이 아니라 실제 공격자 관점에서 검증된 보안을 만듭니다.</p>
+        </div>
+        <div class="card neu-raised card-hover">
+          <div class="card-icon neu-pressed"><span class="ico-am">▤</span></div>
+          <h3>경영진이 읽을 수 있는 보고서</h3>
+          <p>컨설팅이 끝나면 9개 챕터의 최종 보고서(DOCX/PDF)와 ROI·벤치마킹이 포함된 경영진 요약 보고서가 자동 생성됩니다. 기술 용어를 모르는 의사결정권자도 바로 읽고 예산을 결정할 수 있습니다.</p>
+        </div>
+        <div class="card neu-raised card-hover">
+          <div class="card-icon neu-pressed"><span class="ico-gr">↻</span></div>
+          <h3>중단해도 이어서 (Save/Load)</h3>
+          <p>수일이 걸리는 컨설팅 과정 전체를 언제든 저장하고 다시 불러올 수 있습니다. 서버가 재시작돼도 자동으로 상태가 복원되고, 5분마다 자동 저장됩니다. 바쁜 IT팀의 현실적인 업무 흐름에 맞춘 설계입니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WORKFLOW ===== -->
+    <section id="workflow" class="section">
+      <div class="section-head">
+        <span class="section-tag">ISO 27001 Consulting</span>
+        <h2>보안 컨설팅 <span class="text-bl">6단계 워크플로우</span></h2>
+        <p class="section-lead">
+          실제 보안 컨설팅 회사가 수행하는 절차를 ISO 27001:2022 기준으로 6단계로 표준화했습니다.
+          각 단계는 AI 에이전트가 수행하고, 단계가 끝날 때마다 담당자의 승인을 받아야 다음으로 진행됩니다.
+        </p>
+      </div>
+
+      <div class="phases">
+        <div class="phase neu-raised">
+          <div class="phase-num"><span class="n">1</span><span class="t">PHASE</span></div>
+          <div>
+            <h4>사전 준비 · 킥오프</h4>
+            <p>컨설팅 범위와 목표를 정의하고 프로젝트를 시작합니다. PM 에이전트가 조직 규모·산업·고객 유형에 맞는 제안서를 자동 작성하고, NDA와 킥오프 회의 안건까지 준비합니다.</p>
+            <div class="phase-tags"><span class="phase-tag">제안서 자동 생성</span><span class="phase-tag">범위 정의</span><span class="phase-tag">킥오프</span></div>
+          </div>
+        </div>
+        <div class="phase neu-raised">
+          <div class="phase-num"><span class="n">2</span><span class="t">PHASE</span></div>
+          <div>
+            <h4>현황 분석 · 갭(Gap) 분석</h4>
+            <p>관리적·기술적·물리적·컴플라이언스 4개 영역의 현재 보안 수준을 분석합니다. IT 자산을 식별해 기밀성·무결성·가용성(CIA) 등급을 매기고, ISO 27001의 93개 통제항목 각각에 대해 현재 수준(0~5)과 목표 수준의 차이(갭)를 정량화합니다.</p>
+            <div class="phase-tags"><span class="phase-tag">93개 통제항목 갭 분석</span><span class="phase-tag">자산 식별 · CIA 등급</span><span class="phase-tag">4개 영역 현황</span></div>
+          </div>
+        </div>
+        <div class="phase neu-raised">
+          <div class="phase-num"><span class="n">3</span><span class="t">PHASE</span></div>
+          <div>
+            <h4>위험 평가 · 위험 등록부</h4>
+            <p>발견된 갭을 "얼마나 일어나기 쉽고, 일어나면 얼마나 아픈가"의 5×5 매트릭스로 평가합니다. 위험도는 가능성×영향도로 자동 계산되며, 각 위험에 대해 수용·감소·전가·회피 중 처리 전략을 수립해 위험 등록부로 관리합니다.</p>
+            <div class="phase-tags"><span class="phase-tag">5×5 위험 매트릭스</span><span class="phase-tag">위험 등록부</span><span class="phase-tag">처리 전략 4종</span></div>
+          </div>
+        </div>
+        <div class="phase neu-raised">
+          <div class="phase-num"><span class="n">4</span><span class="t">PHASE</span></div>
+          <div>
+            <h4>보안 대책 설계 · 정책 체계</h4>
+            <p>위험을 줄이기 위한 관리적·기술적·물리적 보안 대책을 설계하고, 전사 정책 → 보안 정책 → 업무 절차 → 작업 지침의 4계층 정책 체계를 수립합니다. 대책별로 긴급(1주)·단기(1개월)·중기(6개월)·장기(1년) 이행 로드맵이 만들어집니다.</p>
+            <div class="phase-tags"><span class="phase-tag">4계층 정책 체계</span><span class="phase-tag">이행 로드맵</span><span class="phase-tag">예산 · 난이도 평가</span></div>
+          </div>
+        </div>
+        <div class="phase neu-raised">
+          <div class="phase-num"><span class="n">5</span><span class="t">PHASE</span></div>
+          <div>
+            <h4>이행 지원 · 검증</h4>
+            <p>정책 구축과 직원 교육을 지원하면서, 인프라·웹·모바일·모의침투·소스코드 5개 도메인에 대한 취약점 진단을 실제로 수행합니다. 진단이 끝나면 Pre-Audit(사전 감사)로 관리·기술·물리·운영·인식 5개 영역을 검증합니다.</p>
+            <div class="phase-tags"><span class="phase-tag">5개 도메인 취약점 진단</span><span class="phase-tag">CVSS v4.0 평가</span><span class="phase-tag">Pre-Audit</span></div>
+          </div>
+        </div>
+        <div class="phase neu-raised">
+          <div class="phase-num"><span class="n">6</span><span class="t">PHASE</span></div>
+          <div>
+            <h4>최종 보고 · 사후관리</h4>
+            <p>9개 챕터의 최종 보고서와 경영진 요약 보고서가 DOCX/PDF로 자동 생성됩니다. 컨설팅 종료 후에도 하자보수, 분기별 정기점검, 신규 위협 긴급대응, ISO 27001 인증 유지 체계가 계속 동작합니다.</p>
+            <div class="phase-tags"><span class="phase-tag">DOCX/PDF 자동 생성</span><span class="phase-tag">경영진 보고서</span><span class="phase-tag">사후관리 체계</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STANDARDS ===== -->
+    <section id="standards" class="section">
+      <div class="section-head">
+        <span class="section-tag">Compliance</span>
+        <h2>준수 표준 · 규정 <span class="text-bl">20개 이상</span></h2>
+        <p class="section-lead">
+          ISO 27001을 중심축으로 국내외 주요 보안 표준과 법규를 컴플라이언스 매트릭스로 내장했습니다.
+          고객 유형(정부·금융·공기업·일반기업)에 따라 적용해야 할 규정이 자동으로 매핑됩니다.
+        </p>
+      </div>
+
+      <div class="chips-cloud">
+        <span class="std-chip neu-raised"><b>ISO 27001:2022</b> · 정보보안 관리체계</span>
+        <span class="std-chip neu-raised"><b>ISO 27002/27005/27035</b> · 통제·위험·사고대응</span>
+        <span class="std-chip neu-raised"><b>ISMS-P</b> · 국내 정보보호 인증</span>
+        <span class="std-chip neu-raised"><b>개인정보보호법</b></span>
+        <span class="std-chip neu-raised"><b>정보통신망법</b></span>
+        <span class="std-chip neu-raised"><b>전자금융감독규정</b> · 금융권</span>
+        <span class="std-chip neu-raised"><b>국가정보보안기본지침</b> · 정부기관</span>
+        <span class="std-chip neu-raised"><b>N²SF</b> · 국가 보안 프레임워크</span>
+        <span class="std-chip neu-raised"><b>CSAP</b> · 공공 클라우드 보안인증</span>
+        <span class="std-chip neu-raised"><b>GDPR</b> · EU 개인정보보호</span>
+        <span class="std-chip neu-raised"><b>OWASP Top 10</b> · 웹/LLM</span>
+        <span class="std-chip neu-raised"><b>MITRE ATT&amp;CK</b></span>
+        <span class="std-chip neu-raised"><b>CVSS v4.0</b> · 취약점 점수</span>
+        <span class="std-chip neu-raised"><b>PTES</b> · 모의해킹 표준</span>
+        <span class="std-chip neu-raised"><b>NIST CSF</b></span>
+        <span class="std-chip neu-raised"><b>PCI DSS</b> · 결제 보안</span>
+        <span class="std-chip neu-raised"><b>SOC 2</b></span>
+        <span class="std-chip neu-raised"><b>COBIT</b></span>
+        <span class="std-chip neu-raised"><b>CWE / CVE</b></span>
+        <span class="std-chip neu-raised"><b>CSA</b> · 클라우드 보안</span>
+      </div>
+
+      <div class="quote-banner neu-pressed">
+        지식베이스의 CVE · 법규 · ATT&amp;CK 데이터는 <b>KnowledgeUpdater 에이전트</b>가 매일 변경을 감지해 자동 갱신합니다.<br/>
+        한 번 구축한 컨설팅 체계가 낡지 않도록 — 이것이 "자가(Self)" 컨설팅의 진짜 의미입니다.
+      </div>
+    </section>
+
+    <!-- ===== REPORTS ===== -->
+    <section id="reports" class="section">
+      <div class="section-head">
+        <span class="section-tag">Deliverables</span>
+        <h2>클릭 한 번으로 나오는 <span class="text-bl">보고서 · 산출물</span></h2>
+        <p class="section-lead">
+          컨설팅의 최종 가치는 보고서로 전달됩니다. SSC Platform은 모든 단계의 산출물을 자동 생성하며,
+          DOCX로 받아서 조직 양식에 맞게 바로 수정할 수 있습니다.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card neu-raised">
+          <div class="card-icon neu-pressed"><span class="ico-bl">▤</span></div>
+          <h3>최종 보고서 — 9개 챕터 (DOCX + PDF)</h3>
+          <p>① 경영진 요약 ② 프로젝트 개요 ③ 현황 분석 ④ 위험 평가 ⑤ 보안 대책 상세 ⑥ 취약점 진단 결과 ⑦ 이행 검증 ⑧ 권고사항·로드맵 ⑨ 부록(ISO 27001 통제 매트릭스, CVE 목록).</p>
+          <p>LibreOffice 기반으로 PDF까지 자동 변환되어 이해관계자에게 바로 배포할 수 있습니다.</p>
+        </div>
+        <div class="card neu-raised">
+          <div class="card-icon neu-pressed"><span class="ico-gr">◎</span></div>
+          <h3>경영진 보고서 — 의사결정용</h3>
+          <p>KPI, ROI 분석, 업계 벤치마킹, 주요 위험 TOP 3, 투자 필요성을 담은 별도의 경영진 보고서가 생성됩니다. "왜 이 예산이 필요한가"를 기술 용어 없이 설명합니다.</p>
+        </div>
+        <div class="card neu-raised">
+          <div class="card-icon neu-pressed"><span class="ico-rd">⚑</span></div>
+          <h3>Red Team 기술 · 경영진 보고서</h3>
+          <p>모의해킹 결과는 CVSS v4.0 점수, PoC(공격 재현 절차), 권고사항이 담긴 기술 보고서와, Kill Chain 시각화·비즈니스 영향 중심의 경영진 보고서 2종으로 산출됩니다.</p>
+        </div>
+        <div class="card neu-raised">
+          <div class="card-icon neu-pressed"><span class="ico-am">≣</span></div>
+          <h3>단계별 산출물 전체</h3>
+          <p>갭 분석표, 자산 분류 목록, 위험 등록부, 처리 계획(Gantt), 정책 체계 문서 초안, Pre-Audit 체크리스트, 감사 로그까지 — 모든 중간 산출물이 JSON·표·문서로 저장되고 패키지로 다운로드됩니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== REDTEAM ===== -->
+    <section id="redteam" class="section">
+      <div class="section-head">
+        <span class="section-tag">Red Team</span>
+        <h2><span class="text-rd">PTES 8단계</span> 모의해킹 워크플로우</h2>
+        <p class="section-lead">
+          문서 점검만으로는 실제 공격을 막을 수 있는지 알 수 없습니다. 8종의 Red Team 에이전트가
+          국제 모의해킹 표준 PTES(Penetration Testing Execution Standard)에 따라
+          실제 공격자의 절차를 그대로 수행합니다. 모든 공격 행위는 사전 승인(ROE) 범위 안에서만 실행됩니다.
+        </p>
+      </div>
+
+      <div class="phases">
+        <div class="phase neu-raised">
+          <div class="phase-num phase-rd"><span class="n">1·2</span><span class="t">PTES</span></div>
+          <div>
+            <h4>사전협의 → 정보수집</h4>
+            <p>공격 범위와 교전 규칙(ROE)을 문서로 합의한 뒤, 공개 정보(OSINT)·DNS·인증서를 수집해 외부에서 보이는 공격 표면(Attack Surface)을 매핑합니다. "공격자의 눈에 우리 회사가 어떻게 보이는가"를 먼저 확인하는 단계입니다.</p>
+          </div>
+        </div>
+        <div class="phase neu-raised">
+          <div class="phase-num phase-rd"><span class="n">3·4</span><span class="t">PTES</span></div>
+          <div>
+            <h4>위협 모델링 → 취약점 분석</h4>
+            <p>MITRE ATT&amp;CK에서 우리 조직에 유효한 공격 기법(TTP)을 선정해 공격 시나리오를 설계하고, 웹·인프라·클라우드·모바일·AI/LLM 5개 영역의 전문 에이전트가 병렬로 취약점을 스캔합니다. 발견된 취약점마다 CVSS v4.0 점수가 매겨집니다.</p>
+          </div>
+        </div>
+        <div class="phase neu-raised">
+          <div class="phase-num phase-rd"><span class="n">5·6</span><span class="t">PTES</span></div>
+          <div>
+            <h4>익스플로잇 → 후속 공격</h4>
+            <p>발견된 취약점이 실제로 뚫리는지 PoC(개념 증명)로 검증하고, 침투에 성공하면 어디까지 피해가 번지는지(Blast Radius) 횡적 이동과 데이터 접근 가능성을 측정합니다. 위험한 행위는 모두 승인 게이트를 거칩니다.</p>
+          </div>
+        </div>
+        <div class="phase neu-raised">
+          <div class="phase-num phase-rd"><span class="n">7·8</span><span class="t">PTES</span></div>
+          <div>
+            <h4>보고 → 재검증</h4>
+            <p>기술 보고서와 경영진 보고서를 자동 생성하고, 조치가 완료되면 같은 시나리오로 재검증해 취약점이 정말 제거되었는지 확인합니다. "발견"이 아니라 "제거 확인"까지가 모의해킹의 완성입니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCANNING ===== -->
+    <section id="scanning" class="section">
+      <div class="section-head">
+        <span class="section-tag">Real Scanning</span>
+        <h2>시뮬레이션이 아닌 <span class="text-rd">실측 스캐닝</span></h2>
+        <p class="section-lead">
+          LLM이 "아마 취약할 것"이라고 추측하는 것이 아니라, 실제 스캐닝 도구를 호출해 측정한 결과로 판단합니다.
+          동시에, 스캐닝 자체가 사고가 되지 않도록 안전장치를 코드 레벨에서 강제합니다.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card neu-raised card-hover">
+          <div class="card-icon neu-pressed"><span class="ico-rd">⌖</span></div>
+          <h3>4종 실측 스캐너</h3>
+          <p><b>Nmap 포트 스캔</b>(열린 포트·서비스 버전), <b>SSL/TLS 검사</b>(인증서 유효성·취약 프로토콜·약한 암호), <b>DNS 열거</b>(서브도메인 탐색), <b>HTTP 보안 헤더 검사</b>(HSTS·CSP 등 6종)를 비동기로 실행합니다.</p>
+        </div>
+        <div class="card neu-raised card-hover">
+          <div class="card-icon neu-pressed"><span class="ico-gr">⛨</span></div>
+          <h3>화이트리스트 + 승인 토큰</h3>
+          <p>스캔 대상은 사설망 주소와 사전 허용된 도메인으로 제한되며, 실행에는 승인 토큰이 필요합니다. 실수로 외부 시스템을 스캔해 법적 문제가 생기는 일을 구조적으로 차단합니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== AGENTS ===== -->
+    <section id="agents" class="section">
+      <div class="section-head">
+        <span class="section-tag">AI Agents</span>
+        <h2>역할이 분리된 <span class="text-gr">17종 전문 에이전트</span></h2>
+        <p class="section-lead">
+          하나의 만능 AI가 아니라, 실제 컨설팅 조직처럼 역할이 분리된 에이전트들이 협업합니다.
+          각 에이전트는 자기 전문 영역의 지식과 도구만 사용하며, 마에스트로(오케스트레이터)가 전체 흐름을 지휘합니다.
+        </p>
+      </div>
+
+      <div class="agent-group-title"><span class="text-bl">ISO 27001 컨설팅 에이전트</span><span class="agent-count">5종</span></div>
+      <div class="agents">
+        <div class="agent">
+          <div class="agent-head"><span class="agent-emoji">🧭</span><div><div class="agent-name">PM Agent</div><div class="agent-role text-bl">Project Manager</div></div></div>
+          <p>프로젝트 계획·제안서·킥오프·최종 보고를 총괄. 컨설팅의 시작과 끝을 책임집니다.</p>
+        </div>
+        <div class="agent">
+          <div class="agent-head"><span class="agent-emoji">🛠</span><div><div class="agent-name">TechLead Agent</div><div class="agent-role text-bl">Technical Lead</div></div></div>
+          <p>기술적 보안 분석, 통제 설계, 자산 분류 제안, 이행 계획 수립을 담당합니다.</p>
+        </div>
+        <div class="agent">
+          <div class="agent-head"><span class="agent-emoji">📋</span><div><div class="agent-name">Consultant Agent</div><div class="agent-role text-bl">Security Consultant</div></div></div>
+          <p>현황 분석, 위험 평가, 컴플라이언스 매트릭스 작성 등 컨설팅 본연의 분석을 수행합니다.</p>
+        </div>
+        <div class="agent">
+          <div class="agent-head"><span class="agent-emoji">🔍</span><div><div class="agent-name">PenTest Agent</div><div class="agent-role text-bl">Penetration Tester</div></div></div>
+          <p>5개 도메인 취약점 진단과 모의침투, PoC 작성을 담당합니다.</p>
+        </div>
+        <div class="agent">
+          <div class="agent-head"><span class="agent-emoji">✅</span><div><div class="agent-name">QA Agent</div><div class="agent-role text-bl">Quality Assurance</div></div></div>
+          <p>모든 산출물의 품질을 100점 척도로 검증하고 보고서를 감리합니다.</p>
+        </div>
+      </div>
+
+      <div class="agent-group-title"><span class="text-rd">Red Team 에이전트</span><span class="agent-count">8종</span></div>
+      <div class="agents">
+        <div class="agent">
+          <div class="agent-head"><span class="agent-emoji">🎯</span><div><div class="agent-name">RedTeam Leader</div><div class="agent-role text-rd">Orchestrator</div></div></div>
+          <p>공격 시나리오를 설계하고 PTES 8단계 전체를 지휘합니다.</p>
+        </div>
+        <div class="agent">
+          <div class="agent-head"><span class="agent-emoji">🌐</span><div><div class="agent-name">WebAPI Expert</div><div class="agent-role text-rd">Web · API</div></div></div>
+          <p>OWASP Top 10 — SQL 인젝션, XSS, CSRF, API 보안 취약점을 분석합니다.</p>
+        </div>
+        <div class="agent">
+          <div class="agent-head"><span class="agent-emoji">🖧</span><div><div class="agent-name">Infra Expert</div><div class="agent-role text-rd">Infrastructure</div></div></div>
+          <p>네트워크·AD/LDAP·포트·서비스·권한 상승 경로를 점검합니다.</p>
+        </div>
+        <div class="agent">
+          <div class="agent-head"><span class="agent-emoji">☁</span><div><div class="agent-name">Cloud Expert</div><div class="agent-role text-rd">Cloud Security</div></div></div>
+          <p>AWS·Azure·GCP·NCP의 IAM 권한과 설정 오류, IaC를 검사합니다.</p>
+        </div>
+        <div class="agent">
+          <div class="agent-head"><span class="agent-emoji">🤖</span><div><div class="agent-name">AI/LLM Expert</div><div class="agent-role text-rd">AI Security</div></div></div>
+          <p>프롬프트 인젝션, RAG 파이프라인 보안, 모델 데이터 유출을 진단합니다.</p>
+        </div>
+        <div class="agent">
+          <div class="agent-head"><span class="agent-emoji">📱</span><div><div class="agent-name">Mobile/IoT Expert</div><div class="agent-role text-rd">Mobile · IoT</div></div></div>
+          <p>Android/iOS 앱과 IoT 펌웨어의 민감 데이터 저장·통신을 분석합니다.</p>
+        </div>
+        <div class="agent">
+          <div class="agent-head"><span class="agent-emoji">🎭</span><div><div class="agent-name">SocialEng Expert</div><div class="agent-role text-rd">Social Engineering</div></div></div>
+          <p>피싱·물리 침투 등 사람을 노리는 공격을 시뮬레이션합니다.</p>
+        </div>
+        <div class="agent">
+          <div class="agent-head"><span class="agent-emoji">🧪</span><div><div class="agent-name">RedTeam QA</div><div class="agent-role text-rd">Verification</div></div></div>
+          <p>PoC를 검증하고 CVSS v4.0 점수를 확정하며 보고서를 작성합니다.</p>
+        </div>
+      </div>
+
+      <div class="agent-group-title"><span class="text-gr">유지보수 에이전트</span><span class="agent-count">4종 · 24시간 상주</span></div>
+      <div class="agents">
+        <div class="agent">
+          <div class="agent-head"><span class="agent-emoji">💓</span><div><div class="agent-name">HealthMonitor</div><div class="agent-role text-gr">System Health</div></div></div>
+          <p>5분마다 LLM·CPU·메모리·디스크 상태를 점검합니다.</p>
+        </div>
+        <div class="agent">
+          <div class="agent-head"><span class="agent-emoji">🔎</span><div><div class="agent-name">QualityAuditor</div><div class="agent-role text-gr">Output Audit</div></div></div>
+          <p>각 단계 완료 시 산출물 품질을 자동 감사합니다.</p>
+        </div>
+        <div class="agent">
+          <div class="agent-head"><span class="agent-emoji">📡</span><div><div class="agent-name">KnowledgeUpdater</div><div class="agent-role text-gr">Knowledge Base</div></div></div>
+          <p>CVE·법규·ATT&amp;CK 변경을 매일 감지해 지식베이스를 갱신합니다.</p>
+        </div>
+        <div class="agent">
+          <div class="agent-head"><span class="agent-emoji">🗄</span><div><div class="agent-name">StateGuardian</div><div class="agent-role text-gr">State Integrity</div></div></div>
+          <p>5분 자동 저장과 상태 무결성 검증으로 작업 손실을 막습니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GOVERNANCE ===== -->
+    <section id="governance" class="section">
+      <div class="section-head">
+        <span class="section-tag">Governance</span>
+        <h2>AI를 신뢰하게 만드는 <span class="text-gr">승인 게이트 · 거버넌스</span></h2>
+        <p class="section-lead">
+          "AI가 알아서 했습니다"는 보안 컨설팅에서 허용되지 않는 문장입니다.
+          SSC Platform의 모든 중요 결정에는 사람의 승인과 기록이 남습니다.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card neu-raised card-hover">
+          <div class="card-icon neu-pressed"><span class="ico-gr">✋</span></div>
+          <h3>고객 유형별 다중 승인</h3>
+          <p>정부기관 3인 → 금융권 2인 → 일반기업 1인. 조직의 민감도에 비례해 승인 인원이 늘어납니다. 48시간 내 응답이 없으면 자동 에스컬레이션되고, 반려 시에는 사유 분류와 재수행 가이드가 제공됩니다.</p>
+        </div>
+        <div class="card neu-raised card-hover">
+          <div class="card-icon neu-pressed"><span class="ico-bl">⚿</span></div>
+          <h3>인증 · 역할 기반 접근 제어</h3>
+          <p>JWT 인증에 사내 LDAP/Active Directory 연동을 지원하며, ADMIN·AUDITOR·VIEWER 3단계 역할로 누가 무엇을 볼 수 있는지 분리합니다.</p>
+        </div>
+        <div class="card neu-raised card-hover">
+          <div class="card-icon neu-pressed"><span class="ico-am">≡</span></div>
+          <h3>전 과정 감사 추적</h3>
+          <p>모든 에이전트 호출, 승인·반려, 데이터 변경이 감사 로그로 기록됩니다. "그때 왜 그렇게 판단했는가"를 언제든 재구성할 수 있어 ISMS·ISO 심사 대응 자료로 그대로 활용됩니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HARNESS ===== -->
+    <section id="harness" class="section">
+      <div class="section-head">
+        <span class="section-tag">Harness Engineering</span>
+        <h2>에이전트를 지탱하는 <span class="text-gr">5계층 하니스</span></h2>
+        <p class="section-lead">
+          AI 에이전트를 "잘 돌아가게" 하는 것과 "믿고 맡길 수 있게" 하는 것은 다른 문제입니다.
+          SSC Platform은 5개 계층의 하니스(통제 구조)로 에이전트의 안전·관측·복원·품질·진화를 보장합니다.
+        </p>
+      </div>
+
+      <div class="arch">
+        <div class="arch-layer neu-raised">
+          <div class="arch-layer-title"><span class="arch-layer-no">L1</span><span>Safety — 안전</span></div>
+          <p>승인 게이트, 에이전트 샌드박스(토큰·요청 제한), 개인정보(PII) 마스킹, 악성코드 패턴 차단.</p>
+        </div>
+        <div class="arch-layer neu-raised">
+          <div class="arch-layer-title"><span class="arch-layer-no">L2</span><span>Observability — 관측</span></div>
+          <p>모든 에이전트 호출의 입출력·토큰·시간 추적, 단계별 소요시간·실패율 메트릭, LLM 헬스 대시보드.</p>
+        </div>
+        <div class="arch-layer neu-raised">
+          <div class="arch-layer-title"><span class="arch-layer-no">L3</span><span>Resilience — 복원</span></div>
+          <p>Circuit Breaker(연속 실패 시 자동 차단), 자동 저장, 서버 재시작 시 상태 복원, 점진적 성능 저하(Graceful Degradation).</p>
+        </div>
+        <div class="arch-layer neu-raised">
+          <div class="arch-layer-title"><span class="arch-layer-no">L4</span><span>Quality — 품질</span></div>
+          <p>에이전트 출력 100점 척도 검증, 보고서 챕터·표·CVSS 유효성 검사, 회귀 테스트 30건.</p>
+        </div>
+        <div class="arch-layer neu-raised">
+          <div class="arch-layer-title"><span class="arch-layer-no">L5</span><span>Evolution — 진화</span></div>
+          <p>지식베이스 자동 업데이트, 모델 교체 시 Shadow → A/B → Canary → 전체 적용의 단계적 마이그레이션.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ARCHITECTURE ===== -->
+    <section id="architecture" class="section">
+      <div class="section-head">
+        <span class="section-tag">Architecture</span>
+        <h2>시스템 <span class="text-am">아키텍처 · 기술 스택</span></h2>
+        <p class="section-lead">
+          전부 검증된 오픈소스로 구성되어 있고, Docker Compose 한 번이면 사내 서버에 전체가 올라갑니다.
+          외부 SaaS 의존이 없으므로 망분리 환경에서도 그대로 동작합니다.
+        </p>
+      </div>
+
+      <div class="arch">
+        <div class="arch-layer neu-raised">
+          <div class="arch-layer-title"><span class="arch-layer-no">UI</span><span>Frontend — 33개 화면</span></div>
+          <p>React 18 + TypeScript + Vite + Tailwind CSS. 대시보드·갭 분석·위험 등록부·Red Team 관제 등 33개 화면, 4개 언어 지원. (포트 7778)</p>
+          <div class="arch-cells"><span class="arch-cell">React 18</span><span class="arch-cell">TypeScript</span><span class="arch-cell">Vite</span><span class="arch-cell">Tailwind</span><span class="arch-cell">Zustand</span><span class="arch-cell">Recharts</span></div>
+        </div>
+        <div class="arch-arrow">▼</div>
+        <div class="arch-layer neu-raised">
+          <div class="arch-layer-title"><span class="arch-layer-no">API</span><span>Backend — 67+ REST + WebSocket</span></div>
+          <p>FastAPI(Python 3.12) 기반. 실시간 진행률은 WebSocket으로 스트리밍됩니다. (포트 8080)</p>
+          <div class="arch-cells"><span class="arch-cell">FastAPI</span><span class="arch-cell">Python 3.12</span><span class="arch-cell">Pydantic v2</span><span class="arch-cell">JWT + LDAP/AD</span></div>
+        </div>
+        <div class="arch-arrow">▼</div>
+        <div class="arch-layer neu-raised">
+          <div class="arch-layer-title"><span class="arch-layer-no">AGENT</span><span>오케스트레이션 — 마에스트로 2종 + 에이전트 17종</span></div>
+          <p>LangGraph(흐름 제어) + CrewAI(역할 기반 협업)로 ISO 27001 6단계와 Red Team 8단계를 지휘합니다.</p>
+          <div class="arch-cells"><span class="arch-cell">LangGraph</span><span class="arch-cell">CrewAI</span><span class="arch-cell">ISO Maestro</span><span class="arch-cell">RedTeam Maestro</span></div>
+        </div>
+        <div class="arch-arrow">▼</div>
+        <div class="arch-layer neu-raised">
+          <div class="arch-layer-title"><span class="arch-layer-no">LLM</span><span>Local LLM 엔진 — 100% 온프레미스</span></div>
+          <p>Ollama(qwen2.5:7b / qwen3:8b) 또는 vLLM. 작업 복잡도에 따라 모델을 자동 선택하는 Adaptive Model Router 내장. (포트 11434)</p>
+          <div class="arch-cells"><span class="arch-cell">Ollama</span><span class="arch-cell">vLLM</span><span class="arch-cell">Adaptive Router</span></div>
+        </div>
+        <div class="arch-arrow">▼</div>
+        <div class="arch-layer neu-raised">
+          <div class="arch-layer-title"><span class="arch-layer-no">DATA</span><span>데이터 · 지식베이스</span></div>
+          <p>SQLite(11개 테이블) + JSON Save/Load + ChromaDB 벡터 검색(RAG). ISO 27001 93개 통제항목이 자동 시드됩니다.</p>
+          <div class="arch-cells"><span class="arch-cell">SQLite</span><span class="arch-cell">ChromaDB</span><span class="arch-cell">sentence-transformers</span><span class="arch-cell">python-docx</span></div>
+        </div>
+        <div class="arch-arrow">▼</div>
+        <div class="arch-layer neu-raised">
+          <div class="arch-layer-title"><span class="arch-layer-no">OPS</span><span>배포 · 관측 (선택 확장)</span></div>
+          <p>Docker Compose 단일 명령 배포. 대규모 환경은 Kubernetes + 마이크로서비스 6종 + Prometheus/Grafana/OpenTelemetry로 확장 가능합니다.</p>
+          <div class="arch-cells"><span class="arch-cell">Docker Compose</span><span class="arch-cell">Kubernetes</span><span class="arch-cell">Prometheus</span><span class="arch-cell">Grafana</span><span class="arch-cell">Jaeger</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STATUS ===== -->
+    <section id="status" class="section">
+      <div class="section-head">
+        <span class="section-tag">Implementation Status</span>
+        <h2>숫자로 보는 <span class="text-am">구현 현황</span></h2>
+        <p class="section-lead">
+          SSC Platform은 기획서가 아니라 동작하는 시스템입니다. 모든 수치는 저장소의 코드와 테스트로 검증 가능합니다.
+        </p>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-card neu-raised"><div class="stat-number text-bl">20,100+</div><div class="stat-label">코드 라인 (Python + TS)</div></div>
+        <div class="stat-card neu-raised"><div class="stat-number text-gr">64</div><div class="stat-label">자동화 테스트 통과</div></div>
+        <div class="stat-card neu-raised"><div class="stat-number text-bl">33</div><div class="stat-label">프론트엔드 화면</div></div>
+        <div class="stat-card neu-raised"><div class="stat-number text-gr">11</div><div class="stat-label">데이터 테이블</div></div>
+        <div class="stat-card neu-raised"><div class="stat-number text-bl">62/64</div><div class="stat-label">보안 감사 갭 해결</div></div>
+        <div class="stat-card neu-raised"><div class="stat-number text-gr">100%</div><div class="stat-label">기능 항목 구현</div></div>
+      </div>
+
+      <div class="status-grid" style="margin-top:30px;">
+        <div class="status-pill"><span class="ok">✔</span> ISO 27001 컨설팅 6단계 전체 구현</div>
+        <div class="status-pill"><span class="ok">✔</span> Red Team PTES 8단계 전체 구현</div>
+        <div class="status-pill"><span class="ok">✔</span> DOCX/PDF 보고서 자동 생성</div>
+        <div class="status-pill"><span class="ok">✔</span> E2E 21건 · Chaos 9건 · A/B 4건 테스트 통과</div>
+        <div class="status-pill"><span class="ok">✔</span> Nmap/SSL/DNS/HTTP 실측 스캐닝</div>
+        <div class="status-pill"><span class="ok">✔</span> RAG 지식베이스 + LoRA 파인튜닝 파이프라인</div>
+        <div class="status-pill"><span class="ok">✔</span> 한국어 · 영어 · 일본어 · 중국어 지원</div>
+        <div class="status-pill"><span class="ok">✔</span> Kubernetes + 모니터링 스택 (선택 배포)</div>
+      </div>
+    </section>
+
+    <!-- ===== CUSTOMERS ===== -->
+    <section id="customers" class="section">
+      <div class="section-head">
+        <span class="section-tag">Target Customers</span>
+        <h2>고객 유형별 <span class="text-bl">맞춤 컨설팅</span></h2>
+        <p class="section-lead">
+          같은 ISO 27001이라도 정부기관과 스타트업이 지켜야 할 규정은 다릅니다.
+          프로젝트 생성 시 고객 유형을 선택하면 적용 규정·승인 단계·보고서 양식이 자동으로 맞춰집니다.
+        </p>
+      </div>
+
+      <div class="grid-cards">
+        <div class="card neu-raised card-hover">
+          <div class="card-icon neu-pressed"><span class="ico-bl">🏛</span></div>
+          <h3>정부기관</h3>
+          <p>국가정보보안기본지침, N²SF, 전자정부법 기준 적용. 3인 다중 승인으로 가장 엄격한 거버넌스를 보장합니다.</p>
+        </div>
+        <div class="card neu-raised card-hover">
+          <div class="card-icon neu-pressed"><span class="ico-gr">🏦</span></div>
+          <h3>금융권</h3>
+          <p>전자금융감독규정, 금융보안원 기준, ISMS-P를 매핑. 은행·보험·증권의 감독 대응 자료를 함께 산출합니다.</p>
+        </div>
+        <div class="card neu-raised card-hover">
+          <div class="card-icon neu-pressed"><span class="ico-am">🏗</span></div>
+          <h3>공기업 · 공공기관</h3>
+          <p>공공기관 정보보안 관리규정과 CSAP(클라우드 보안인증) 연계 점검을 지원합니다.</p>
+        </div>
+        <div class="card neu-raised card-hover">
+          <div class="card-icon neu-pressed"><span class="ico-rd">🏢</span></div>
+          <h3>일반기업</h3>
+          <p>정보통신망법·개인정보보호법 기본 준수에 GDPR·SOC 2·공급망 보안까지 — 성장 단계에 맞게 확장합니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VISION ===== -->
+    <section id="vision" class="section">
+      <div class="section-head">
+        <span class="section-tag">Vision</span>
+        <h2>기대 효과와 <span class="text-gr">비전</span></h2>
+        <p class="section-lead">
+          보안 컨설팅의 진입 장벽이 사라지면, 그동안 보안 투자를 미뤄왔던 수많은 조직이
+          스스로를 진단하고 개선할 수 있게 됩니다. 이것이 국가 전체의 사이버 보안 수준을 끌어올리는 길이라고 믿습니다.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card neu-raised card-hover">
+          <div class="card-icon neu-pressed"><span class="ico-bl">₩</span></div>
+          <h3>비용 — 수억 원 → 0원</h3>
+          <p>오픈소스로 공개되어 라이선스 비용이 없습니다. 필요한 것은 사내 서버와 IT 담당자의 시간뿐입니다.</p>
+        </div>
+        <div class="card neu-raised card-hover">
+          <div class="card-icon neu-pressed"><span class="ico-gr">◔</span></div>
+          <h3>기간 — 수개월 → 수일</h3>
+          <p>에이전트가 분석·문서화를 자동화하므로 사람은 검토와 승인에만 집중하면 됩니다. Save/Load로 업무 틈틈이 진행할 수 있습니다.</p>
+        </div>
+        <div class="card neu-raised card-hover">
+          <div class="card-icon neu-pressed"><span class="ico-am">∞</span></div>
+          <h3>일회성 → 상시 체계</h3>
+          <p>컨설팅이 끝나도 유지보수 에이전트 4종이 상주하며 새로운 위협과 법규 변화를 반영합니다. 보안이 "행사"가 아니라 "일상"이 됩니다.</p>
+        </div>
+      </div>
+
+      <div class="quote-banner neu-pressed">
+        "보안 컨설팅을 <b>받는 조직</b>에서, 보안 컨설팅을 <b>할 수 있는 조직</b>으로."<br/>
+        SSC Platform은 모든 조직이 자기 자신의 보안 컨설턴트가 되는 미래를 만듭니다.
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="footer">
+    <div class="footer-inner neu-raised">
+      <div>
+        <div class="footer-brand">WDLAB · SSC Platform</div>
+        <div class="footer-meta">Self Security Consulting Platform — ISO 27001 멀티에이전트 AI 보안 컨설팅 · Red Team 취약점 분석</div>
+      </div>
+      <div class="footer-meta">
+        © 2026 WDLAB. Open Source (비상용) · 100% On-Premises · Local LLM
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top neu-raised" id="toTop" aria-label="맨 위로">↑</button>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
