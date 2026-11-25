@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<meta name="description" content="AI 전문 에이전트가 ISO 27001 기반 보안 자가진단과 Red Team 취약점 분석을 수행하고 사람이 단계마다 승인하는 SSC를 소개합니다. One Cycle Dev. Framework의 03 보안 분석·수정 단계입니다.">
+<meta name="keywords" content="소프트웨어,서비스,시스템,보안,유통,컨설팅">
+<meta name="Classification" content="보안컨설팅 및 서비스 소프트웨어 개발,유통 및 판매 외">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SSC · 셀프 보안 컨설팅 플랫폼 | 에이쓰리시큐리티">
+<meta property="og:site_name" content="에이쓰리시큐리티">
+<meta property="og:image" content="/resources/images/A3/img/A3_favicon.png">
+<meta property="og:description" content="AI 전문 에이전트가 ISO 27001 기반 보안 자가진단과 Red Team 취약점 분석을 수행하고 사람이 단계마다 승인하는 SSC를 소개합니다. One Cycle Dev. Framework의 03 보안 분석·수정 단계입니다.">
+
+<meta property="og:url" content="https://www.a3sc.co.kr/a3sc/ISMA3SC003M7.do">
+<meta property="al:web:url" content="https://www.a3sc.co.kr">
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://www.a3sc.co.kr/a3sc/ISMA3SC003M7.do">
+<link rel="shortcut icon" href="/resources/images/A3/img/A3_favicon.png" />
+<link rel="icon" href="/resources/images/A3/img/A3_favicon.png" />
+<title>SSC · 셀프 보안 컨설팅 플랫폼 | 에이쓰리시큐리티</title>
+
+<style>@font-face{font-family:'Pretendard Variable';src:url(/resources/font/renewal/PretendardVariable.woff2) format('woff2-variations');font-weight:45 920;font-style:normal;font-display:swap}</style>
+<link rel="stylesheet" href="/resources/css/A3/renewal/b.css">
+<link rel="stylesheet" href="/resources/css/A3/renewal/onecycle_product.css">
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+<header class="gh"><div class="wrap"><a class="logo" href="/a3sc/ISMA3SC001M1.do"><img class="on-dark" src="/resources/images/A3/renewal/img/foot_logo.png" alt="A3 SECURITY"><img class="on-light" src="/resources/images/A3/renewal/img/logo.png" alt="A3 SECURITY"></a>
+  <nav><a href="/a3sc/ISMA3SC002M1.do" class="">회사소개</a><a href="/a3sc/ISMA3SC003M4.do" class="on">AI 플랫폼</a><a href="/a3sc/ISMA3SC003M1.do" class="">보안 서비스</a><a href="/a3sc/ISMA3SC004M1.do?brdType=N" class="">정보센터</a></nav>
+  <a class="pill red hcta" href="#contact">문의하기</a><span class="brand"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-41 -41 16347 1438" role="img" aria-label="AI &amp; SECURITY"><path fill="currentColor" stroke="currentColor" stroke-width="41" stroke-linejoin="round" d="M937 902H412L320 1116Q286 1195 286 1234Q286 1265 315.5 1288.5Q345 1312 443 1319V1356H16V1319Q101 1304 126 1280Q177 1232 239 1085L716 -31H751L1223 1097Q1280 1233 1326.5 1273.5Q1373 1314 1456 1319V1356H921V1319Q1002 1315 1030.5 1292.0Q1059 1269 1059 1236Q1059 1192 1019 1097ZM909 828 679 280 443 828ZM2233.88 1319V1356H1652.88V1319H1700.88Q1784.88 1319 1822.88 1270Q1846.88 1238 1846.88 1116V240Q1846.88 137 1833.88 104Q1823.88 79 1792.88 61Q1748.88 37 1700.88 37H1652.88V0H2233.88V37H2184.88Q2101.88 37 2063.88 86Q2038.88 118 2038.88 240V1116Q2038.88 1219 2051.88 1252Q2061.88 1277 2093.88 1295Q2136.88 1319 2184.88 1319ZM4086.6400000000003 483H4506.64V520Q4419.64 527 4378.14 558.5Q4336.64 590 4248.64 749.0Q4160.64 908 4050.6400000000003 1046Q4139.64 1150 4209.64 1191.5Q4279.64 1233 4350.64 1233Q4419.64 1233 4467.64 1195.5Q4515.64 1158 4535.64 1085L4572.64 1112Q4535.64 1253 4453.64 1320.0Q4371.64 1387 4262.64 1387Q4180.64 1387 4096.14 1342.5Q4011.6400000000003 1298 3911.6400000000003 1192Q3787.6400000000003 1302 3688.1400000000003 1344.5Q3588.6400000000003 1387 3475.6400000000003 1387Q3310.6400000000003 1387 3213.6400000000003 1299.0Q3116.6400000000003 1211 3116.6400000000003 1089Q3116.6400000000003 968 3203.6400000000003 847.5Q3290.6400000000003 727 3530.6400000000003 598Q3483.6400000000003 494 3466.6400000000003 427.5Q3449.6400000000003 361 3449.6400000000003 300Q3449.6400000000003 129 3575.6400000000003 39Q3673.6400000000003 -31 3798.6400000000003 -31Q3917.6400000000003 -31 3992.6400000000003 39.5Q4067.6400000000003 110 4067.6400000000003 213Q4067.6400000000003 319 3995.1400000000003 399.0Q3922.6400000000003 479 3738.6400000000003 574Q3865.6400000000003 800 4003.6400000000003 988Q4179.64 778 4179.64 634Q4179.64 588 4149.64 552Q4127.64 525 4086.6400000000003 520ZM3704.6400000000003 509Q3828.6400000000003 450 3890.1400000000003 375.0Q3951.6400000000003 300 3951.6400000000003 208Q3951.6400000000003 136 3907.1400000000003 89.0Q3862.6400000000003 42 3796.6400000000003 42Q3709.6400000000003 42 3665.1400000000003 102.5Q3620.6400000000003 163 3620.6400000000003 221Q3620.6400000000003 270 3637.6400000000003 330.5Q3654.6400000000003 391 3704.6400000000003 509ZM3859.6400000000003 1134Q3727.6400000000003 954 3676.6400000000003 871.0Q3625.6400000000003 788 3564.6400000000003 665Q3444.6400000000003 734 3384.1400000000003 817.0Q3323.6400000000003 900 3323.6400000000003 997Q3323.6400000000003 1104 3392.6400000000003 1185.0Q3461.6400000000003 1266 3578.6400000000003 1266Q3641.6400000000003 1266 3700.1400000000003 1241.0Q3758.6400000000003 1216 3859.6400000000003 1134ZM6331.400000000001 -31V438H6294.400000000001Q6276.400000000001 303 6229.900000000001 223.0Q6183.400000000001 143 6097.400000000001 96.0Q6011.400000000001 49 5919.400000000001 49Q5815.400000000001 49 5747.400000000001 112.5Q5679.400000000001 176 5679.400000000001 257Q5679.400000000001 319 5722.400000000001 370Q5784.400000000001 445 6017.400000000001 570Q6207.400000000001 672 6276.900000000001 726.5Q6346.400000000001 781 6383.900000000001 855.0Q6421.400000000001 929 6421.400000000001 1010Q6421.400000000001 1164 6301.900000000001 1275.5Q6182.400000000001 1387 5994.400000000001 1387Q5935.400000000001 1387 5883.400000000001 1378Q5852.400000000001 1373 5754.900000000001 1341.5Q5657.400000000001 1310 5631.400000000001 1310Q5606.400000000001 1310 5591.900000000001 1325.0Q5577.400000000001 1340 5570.400000000001 1387H5533.400000000001V922H5570.400000000001Q5596.400000000001 1068 5640.400000000001 1140.5Q5684.400000000001 1213 5774.900000000001 1261.0Q5865.400000000001 1309 5973.400000000001 1309Q6098.400000000001 1309 6170.900000000001 1243.0Q6243.400000000001 1177 6243.400000000001 1087Q6243.400000000001 1037 6215.900000000001 986.0Q6188.400000000001 935 6130.400000000001 891Q6091.400000000001 861 5917.400000000001 763.5Q5743.400000000001 666 5669.900000000001 608.0Q5596.400000000001 550 5558.400000000001 480.0Q5520.400000000001 410 5520.400000000001 326Q5520.400000000001 180 5632.400000000001 74.5Q5744.400000000001 -31 5917.400000000001 -31Q6025.400000000001 -31 6146.400000000001 22Q6202.400000000001 47 6225.400000000001 47Q6251.400000000001 47 6267.900000000001 31.5Q6284.400000000001 16 6294.400000000001 -31ZM7082.280000000001 74V610H7380.280000000001Q7496.280000000001 610 7535.280000000001 575Q7587.280000000001 529 7593.280000000001 413H7630.280000000001V885H7593.280000000001Q7579.280000000001 786 7565.280000000001 758Q7547.280000000001 723 7506.280000000001 703.0Q7465.280000000001 683 7380.280000000001 683H7082.280000000001V1130Q7082.280000000001 1220 7090.280000000001 1239.5Q7098.280000000001 1259 7118.280000000001 1270.5Q7138.280000000001 1282 7194.280000000001 1282H7424.280000000001Q7539.280000000001 1282 7591.280000000001 1266.0Q7643.280000000001 1250 7691.280000000001 1203Q7753.280000000001 1141 7818.280000000001 1016H7858.280000000001L7741.280000000001 1356H6696.280000000001V1319H6744.280000000001Q6792.280000000001 1319 6835.280000000001 1296Q6867.280000000001 1280 6878.780000000001 1248.0Q6890.280000000001 1216 6890.280000000001 1117V236Q6890.280000000001 107 6864.280000000001 77Q6828.280000000001 37 6744.280000000001 37H6696.280000000001V0H7741.280000000001L7756.280000000001 297H7717.280000000001Q7696.280000000001 190 7670.780000000001 150.0Q7645.280000000001 110 7595.280000000001 89Q7555.280000000001 74 7454.280000000001 74ZM9261.16 -31 9292.16 430H9261.16Q9199.16 223 9084.16 132.0Q8969.16 41 8808.16 41Q8673.16 41 8564.16 109.5Q8455.16 178 8392.66 328.0Q8330.16 478 8330.16 701Q8330.16 885 8389.16 1020.0Q8448.16 1155 8566.66 1227.0Q8685.16 1299 8837.16 1299Q8969.16 1299 9070.16 1242.5Q9171.16 1186 9292.16 1018L9323.16 1038Q9221.16 1219 9085.16 1303.0Q8949.16 1387 8762.16 1387Q8425.16 1387 8240.16 1137Q8102.160000000001 951 8102.160000000001 699Q8102.160000000001 496 8193.16 326.0Q8284.16 156 8443.66 62.5Q8603.16 -31 8792.16 -31Q8939.16 -31 9082.16 41Q9124.16 63 9142.16 63Q9169.16 63 9189.16 44Q9215.16 17 9226.16 -31ZM10494.04 37V0H10974.04V37H10923.04Q10843.04 37 10800.04 104Q10779.04 135 10779.04 248V798Q10779.04 1002 10738.54 1114.5Q10698.04 1227 10579.54 1307.5Q10461.04 1388 10257.04 1388Q10035.04 1388 9920.04 1311.0Q9805.04 1234 9757.04 1104Q9725.04 1015 9725.04 770V240Q9725.04 115 9690.54 76.0Q9656.04 37 9579.04 37H9528.04V0H10114.04V37H10062.04Q9978.04 37 9942.04 90Q9917.04 126 9917.04 240V831Q9917.04 910 9931.54 1012.0Q9946.04 1114 9984.04 1171.0Q10022.04 1228 10093.54 1265.0Q10165.04 1302 10269.04 1302Q10402.04 1302 10507.04 1244.0Q10612.04 1186 10650.54 1095.5Q10689.04 1005 10689.04 789V240Q10689.04 113 10661.04 81Q10622.04 37 10545.04 37ZM12502.920000000002 1356H12140.920000000002L11681.920000000002 722Q11630.920000000002 724 11598.920000000002 724Q11585.920000000002 724 11570.920000000002 723.5Q11555.920000000002 723 11539.920000000002 722V1116Q11539.920000000002 1244 11567.920000000002 1275Q11605.920000000002 1319 11681.920000000002 1319H11734.920000000002V1356H11153.920000000002V1319H11204.920000000002Q11290.920000000002 1319 11327.920000000002 1263Q11348.920000000002 1232 11348.920000000002 1116V240Q11348.920000000002 112 11320.920000000002 81Q11281.920000000002 37 11204.920000000002 37H11153.920000000002V0H11647.920000000002Q11863.920000000002 0 11966.420000000002 31.5Q12068.920000000002 63 12140.420000000002 147.5Q12211.920000000002 232 12211.920000000002 349Q12211.920000000002 474 12130.420000000002 566.0Q12048.920000000002 658 11877.920000000002 696L12157.920000000002 1085Q12253.920000000002 1219 12322.920000000002 1263.0Q12391.920000000002 1307 12502.920000000002 1319ZM11539.920000000002 659Q11558.920000000002 659 11572.920000000002 659.5Q11586.920000000002 660 11595.920000000002 660Q11789.920000000002 660 11888.420000000002 576.0Q11986.920000000002 492 11986.920000000002 362Q11986.920000000002 235 11907.420000000002 155.5Q11827.920000000002 76 11696.920000000002 76Q11638.920000000002 76 11539.920000000002 95ZM13239.800000000003 1319V1356H12658.800000000003V1319H12706.800000000003Q12790.800000000003 1319 12828.800000000003 1270Q12852.800000000003 1238 12852.800000000003 1116V240Q12852.800000000003 137 12839.800000000003 104Q12829.800000000003 79 12798.800000000003 61Q12754.800000000003 37 12706.800000000003 37H12658.800000000003V0H13239.800000000003V37H13190.800000000003Q13107.800000000003 37 13069.800000000003 86Q13044.800000000003 118 13044.800000000003 240V1116Q13044.800000000003 1219 13057.800000000003 1252Q13067.800000000003 1277 13099.800000000003 1295Q13142.800000000003 1319 13190.800000000003 1319ZM14597.680000000002 0 14612.680000000002 318H14574.680000000002Q14563.680000000002 234 14544.680000000002 198Q14513.680000000002 140 14462.180000000002 112.5Q14410.680000000002 85 14326.680000000002 85H14135.680000000002V1121Q14135.680000000002 1246 14162.680000000002 1277Q14200.680000000002 1319 14279.680000000002 1319H14326.680000000002V1356H13751.680000000002V1319H13799.680000000002Q13885.680000000002 1319 13921.680000000002 1267Q13943.680000000002 1235 13943.680000000002 1121V85H13780.680000000002Q13685.680000000002 85 13645.680000000002 99Q13593.680000000002 118 13556.680000000002 172.0Q13519.680000000002 226 13512.680000000002 318H13474.680000000002L13490.680000000002 0ZM15762.560000000001 0H16235.560000000001V37H16209.560000000001Q16183.560000000001 37 16133.560000000001 60.0Q16083.560000000001 83 16042.560000000001 126.0Q16001.560000000001 169 15941.560000000001 266L15614.560000000001 781V1121Q15614.560000000001 1246 15642.560000000001 1277Q15680.560000000001 1319 15762.560000000001 1319H15806.560000000001V1356H15230.560000000001V1319H15278.560000000001Q15364.560000000001 1319 15400.560000000001 1267Q15422.560000000001 1235 15422.560000000001 1121V800L15050.560000000001 232Q14984.560000000001 132 14961.060000000001 107.0Q14937.560000000001 82 14863.560000000001 47Q14843.560000000001 37 14805.560000000001 37V0H15385.560000000001V37H15355.560000000001Q15308.560000000001 37 15269.060000000001 59.0Q15229.560000000001 81 15229.560000000001 125Q15229.560000000001 161 15290.560000000001 255L15573.560000000001 692L15839.560000000001 274Q15899.560000000001 180 15899.560000000001 134Q15899.560000000001 106 15885.060000000001 84.0Q15870.560000000001 62 15843.560000000001 49.5Q15816.560000000001 37 15762.560000000001 37Z"/></svg></span>
+  <button type="button" class="menu" aria-label="전체 메뉴" aria-expanded="false" aria-controls="mnav"></button></div>
+  <nav class="mnav" id="mnav" aria-label="전체 메뉴" hidden><div class="wrap"><div class="grp"><a class="h" href="/a3sc/ISMA3SC002M1.do">회사소개</a><ul><li><a href="/a3sc/ISMA3SC002M1.do">회사개요</a></li><li><a href="/a3sc/ISMA3SC002M2.do">CEO 인사말</a></li><li><a href="/a3sc/ISMA3SC002M3.do">연혁</a></li><li><a href="/a3sc/ISMA3SC002M4.do">인재상</a></li><li><a href="/a3sc/ISMA3SC002M5.do">찾아오시는 길</a></li><li><a href="https://www.saramin.co.kr/zf_user/company-info/view-inner-recruit?csn=ZU9zdmxNSTZCU0ViN1NJRC9NOGtPUT09" target="_blank" rel="noopener">채용공고 ↗</a></li></ul></div><div class="grp on"><a class="h" href="/a3sc/ISMA3SC003M4.do">AI 플랫폼</a><ul><li><a href="/a3sc/ISMA3SC003M4.do#intro">개요</a></li><li><a href="/a3sc/ISMA3SC003M4.do#strength">강점</a></li><li><a href="/a3sc/ISMA3SC003M4.do#lineup">플랫폼 9종</a></li><li><a href="/a3sc/ISMA3SC003M5.do">One Cycle Framework</a></li><li><a href="/a3sc/ISMA3SC003M4.do#contact">도입 문의</a></li></ul></div><div class="grp"><a class="h" href="/a3sc/ISMA3SC003M1.do">보안 서비스</a><ul><li><a href="/a3sc/ISMA3SC003M1.do">보안컨설팅</a></li><li><a href="/a3sc/ISMA3SC003M2.do">보안관제</a></li><li><a href="/a3sc/ISMA3SC003M3.do">보안솔루션</a></li></ul></div><div class="grp"><a class="h" href="/a3sc/ISMA3SC004M1.do?brdType=N">정보센터</a><ul><li><a href="/a3sc/ISMA3SC004M1.do?brdType=N">공지사항</a></li><li><a href="/a3sc/ISMA3SC004M1.do?brdType=C">뉴스클리핑</a></li><li><a href="/a3sc/ISMA3SC004M1.do?brdType=T">보안동향</a></li><li><a href="/a3sc/ISMA3SC004M1.do?brdType=R">보안권고</a></li></ul></div>
+  <a class="pill red" href="#contact">문의하기</a></div></nav>
+<script>/* 모바일 전체 메뉴 열고 닫기 */(function(){var b=document.querySelector('.gh .menu'),m=document.getElementById('mnav');if(!b||!m)return;function set(o){m.hidden=!o;b.setAttribute('aria-expanded',o);document.documentElement.classList.toggle('mnav-open',o)}b.addEventListener('click',function(){set(m.hidden)});m.addEventListener('click',function(e){if(e.target.closest('a'))set(false)});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden){set(false);b.focus()}});matchMedia('(min-width:761px)').addEventListener('change',function(e){if(e.matches)set(false)})})()</script></header>
+
+<main>
+<!-- =========================================================
+     SSC · Self Security Consulting · 본문 (기존 레이아웃의 <main> … </main> 안에 넣는 부분)
+     One Cycle Dev. Framework(ISMA3SC003M5)의 03 보안 분석·수정 단계 상세 화면
+     필요한 것: b.css 다음에 /resources/css/A3/renewal/onecycle_product.css
+     ========================================================= -->
+<section class="hero pd-hero" id="top">
+  <div class="pd-orbit" aria-hidden="true"><svg viewBox="0 0 400 400" fill="none">
+    <circle cx="200" cy="200" r="196" stroke="rgba(255,255,255,.06)"/>
+    <circle cx="200" cy="200" r="150" stroke="rgba(255,255,255,.14)"/>
+    <circle cx="200" cy="200" r="104" stroke="rgba(255,255,255,.07)"/>
+    <circle class="dot" cx="200" cy="50" r="4"/><circle class="dot" cx="329.9" cy="125" r="4"/><circle class="halo" cx="329.9" cy="275" r="7"/><circle class="me" cx="329.9" cy="275" r="7"/><circle class="dot" cx="200" cy="350" r="4"/><circle class="dot" cx="70.1" cy="275" r="4"/><circle class="dot" cx="70.1" cy="125" r="4"/>
+  </svg></div>
+  <div class="wrap">
+    <nav class="pd-crumb" aria-label="현재 위치"><a href="/a3sc/ISMA3SC003M4.do">AI 플랫폼</a><a href="/a3sc/ISMA3SC003M5.do">One Cycle Dev. Framework</a><b>03 보안 분석·수정</b></nav>
+    <span class="kicker">SSC · Self Security Consulting</span>
+    <h1>보안 진단과 모의침투,<br>조직이 <em>스스로</em> 돌려 봅니다</h1>
+    <p class="lede">역할이 나뉜 AI 에이전트가 국제 표준에 따른 보안 자가진단과 공격자 관점의 취약점 분석을 수행합니다. 단계마다 책임자가 결과를 읽고 승인해야 다음으로 넘어가며, 보고서는 자동으로 만들어집니다. 모든 처리는 조직 내부에서만 이루어집니다.</p>
+    <div class="hero-meta">
+      <div><b>14<small>종</small></b><span>전문 AI 에이전트 (컨설팅 5 · Red Team 9)</span></div>
+      <div><b>93<small>개</small></b><span>ISO 27001:2022 부속서 A 통제항목</span></div>
+      <div><b>6<small>단계</small></b><span>보안 자가진단 절차</span></div>
+      <div><b>8<small>단계</small></b><span>Red Team 취약점 분석 절차 (PTES)</span></div>
+    </div>
+    <nav class="subnav" id="pd-subnav"><a href="#intro" class="on">개요</a><a href="#how">동작 방식</a><a href="#process">진단 절차</a><a href="#features">주요 기능</a><a href="#output">결과물</a><a href="#cycle">One Cycle 연결</a><a href="#terms">용어·FAQ</a><a href="#contact">도입 문의</a></nav>
+  </div>
+</section>
+
+<!-- 개요: 무엇이고, 왜 필요한가 -->
+<section class="sec"><div class="wrap pd-anchor" id="intro">
+  <div class="intro"><div><span class="kicker">Overview</span><h2>보안 진단을<br><em>기다리지 않고</em> 시작합니다</h2></div>
+    <div class="prose"><p class="big">보안 수준을 점검해야 한다는 것은 알지만, 전문 인력과 시간, 비용이 부족해 다음 정기 점검까지 미루는 조직이 많습니다.</p>
+    <p>정기 컨설팅과 인증 심사는 정해진 시점의 상태를 확인합니다. 그 사이에도 시스템은 바뀌고 장비는 늘어납니다. 또 진단 과정에서는 자산 목록, 네트워크 구조, 취약점 같은 가장 민감한 정보가 다루어지므로, 이를 외부 AI 서비스에 올려 분석하기는 어렵습니다.</p>
+    <p>SSC(Self Security Consulting)는 이 일을 조직 안에서 스스로 해 볼 수 있게 합니다. 국제 정보보안 표준인 ISO 27001:2022에 따른 6단계 자가진단과, 모의침투 수행 표준 PTES에 따른 8단계 Red Team 취약점 분석을 AI 에이전트가 수행합니다. 담당자는 단계마다 결과를 검토해 승인하거나 반려합니다.</p>
+    <p>발견한 문제는 위험 등급, 대책, 이행 일정으로 정리되고, 조치한 뒤에는 다시 점검해 해소 여부를 확인합니다. 진단에서 개선, 재확인, 보고서까지가 하나의 흐름으로 이어집니다.</p></div></div>
+  <div class="pd-plain"><span class="lb">쉽게 말하면</span>
+    <p>외부 검진센터에 가지 않고 <em>회사 안에서 받는 정기 건강검진</em>입니다.</p>
+    <small>문진에 해당하는 것이 표준 대비 자가진단이고, 정밀검사에 해당하는 것이 모의침투입니다. 검사는 분야별 AI가 맡지만 결과지는 책임자가 확인하고 서명해야 확정되며, 검사 기록은 건물 밖으로 나가지 않습니다. 다만 건강검진이 진단서 발급을 대신하지 않듯, 공식 인증 심사를 대신하지는 않습니다.</small></div>
+  <div class="pd-cards">
+    <article><div class="ft"><span>전문 인력이 부족해도</span><b>스스로 진단</b></div><p>프로젝트를 만들고 단계를 실행하면 에이전트가 초안을 작성합니다. 담당자는 화면을 따라가며 검토하고 보완합니다.</p></article>
+    <article><div class="ft"><span>AI가 한 일은</span><b>사람이 승인</b></div><p>각 단계는 과제수행 책임자가 승인해야 다음으로 넘어갑니다. 반려하면 같은 단계를 다시 수행합니다.</p></article>
+    <article><div class="ft"><span>찾은 문제는</span><b>조치와 재확인까지</b></div><p>위험 처리 방침과 대책, 이행 일정을 정하고, 조치 후 재진단으로 취약점이 해소되었는지 확인합니다.</p></article>
+    <article><div class="ft"><span>민감한 정보는</span><b>조직 안에서만</b></div><p>플랫폼과 AI 추론 엔진이 모두 내부 설비에 설치됩니다. 진단 자료와 결과가 외부 AI 서비스로 전송되지 않습니다.</p></article>
+  </div>
+</div></section>
+
+<!-- 동작 방식 -->
+<section class="sec dark"><div class="wrap pd-anchor" id="how">
+  <div class="sec-h"><div><span class="kicker">How it works</span><h2>실행하고, 검토하고,<br>승인하면 다음 단계로</h2></div><p>자가진단이든 Red Team 분석이든 진행 방식은 같습니다. 에이전트가 한 단계를 수행하면 사람이 결과를 읽고 승인 여부를 정합니다. 승인 전에는 다음 단계로 진행되지 않습니다.</p></div>
+  <ol class="pd-steps">
+    <li><b>과제와 범위를 정합니다</b><p>조직 유형, 진단 범위, 과제수행 책임자를 지정해 프로젝트를 만듭니다. 취약점 분석은 점검 대상과 유형을 지정한 스캔으로 등록합니다.</p><span class="who h">담당자 · 책임자</span></li>
+    <li><b>보유 자산을 파악합니다</b><p>승인된 내부망 대역을 훑어 연결된 장비를 자동으로 찾아 자산 대장에 올립니다. 점검 때 꺼져 있던 장비는 이후 주기 점검에서 포착합니다.</p><span class="who">플랫폼 자동 수행</span></li>
+    <li><b>에이전트가 단계를 수행합니다</b><p>총괄 PM, 기술 리드, 보안 컨설턴트 등 역할이 나뉜 에이전트가 해당 단계의 분석과 산출물 초안을 작성합니다.</p><span class="who">AI 에이전트</span></li>
+    <li><b>사람이 검토하고 승인합니다</b><p>결과가 사실과 맞는지, 조직 상황에 맞는지 확인하고 검토 의견과 함께 승인 또는 반려합니다. 이 기록은 감사 이력으로 남습니다.</p><span class="who h">과제수행 책임자의 승인</span></li>
+    <li><b>내용을 보완합니다</b><p>단계별 작업 화면에서 AI가 작성한 내용을 실제 상황에 맞게 고치고, 빠진 내용을 직접 입력해 저장합니다.</p><span class="who h">담당자</span></li>
+    <li><b>보고서를 내려받습니다</b><p>마지막 단계까지 반복한 뒤 최종 보고서와 경영진 보고서, 모의침투 보고서를 생성합니다.</p><span class="who">플랫폼 자동 생성</span></li>
+  </ol>
+  <div class="pd-legend"><span>AI 에이전트·플랫폼이 수행</span><span class="h">사람이 정하고 승인</span></div>
+</div></section>
+
+<!-- 진단 절차 ①: 자가진단 6단계 -->
+<section class="sec soft"><div class="wrap pd-anchor" id="process">
+  <div class="sec-h"><div><span class="kicker">Self assessment</span><h2>표준에 비추어 보는<br>6단계 자가진단</h2></div><p>ISO 27001:2022 부속서 A의 93개 통제항목을 기준으로 현재 수준과 목표 수준의 차이를 찾고, 위험을 평가해 대책과 이행 계획까지 이어 갑니다.</p></div>
+  <div class="pd-tw"><table class="pd-table"><thead><tr><th scope="col">단계</th><th scope="col">하는 일</th><th scope="col">남는 것</th></tr></thead><tbody>
+    <tr><th scope="row"><span class="st">1</span> 사전준비</th><td>진단의 범위와 목표, 수행 체계를 정합니다.</td><td>프로젝트 정의</td></tr>
+    <tr><th scope="row"><span class="st">2</span> 현황 분석·진단</th><td>관리·기술·물리 영역의 현재 보안 수준을 파악하고, 통제항목별로 표준과의 차이(갭)를 분석합니다.</td><td>현황 분석, 갭 분석, 자산 목록</td></tr>
+    <tr><th scope="row"><span class="st">3</span> 위험 평가</th><td>위협과 취약점을 식별하고, 발생 가능성과 영향도를 곱한 점수로 위험 등급을 매깁니다.</td><td>위험 평가 결과, 위험 등록부, 처리 계획</td></tr>
+    <tr><th scope="row"><span class="st">4</span> 보안 대책 수립</th><td>위험을 줄이기 위한 통제와 정책 체계, 이행 일정을 설계합니다.</td><td>통제 설계, 정책 체계, 이행 로드맵</td></tr>
+    <tr><th scope="row"><span class="st">5</span> 이행 지원·검증</th><td>대책의 이행을 기록하고, 실제 점검 도구와 사전 감사로 효과를 확인합니다.</td><td>이행 기록, 취약점 진단, 사전 감사 결과</td></tr>
+    <tr><th scope="row"><span class="st">6</span> 최종 보고</th><td>전 단계의 결과를 보고서로 정리하고 사후관리 방안을 정합니다.</td><td>최종 보고서, 경영진 보고서</td></tr>
+  </tbody></table></div>
+  <p class="pd-note">프로젝트를 만들 때 고른 조직 유형(정부기관·금융권·공기업·일반기업)에 따라 함께 살펴야 할 표준과 법규가 달라집니다. 플랫폼은 20개 표준·법규가 유형별로 필수인지 권고인지를 한 표로 보여 줍니다.</p>
+</div></section>
+
+<!-- 진단 절차 ②: Red Team 8단계 -->
+<section class="sec dark"><div class="wrap">
+  <div class="sec-h"><div><span class="kicker">Red Team</span><h2>공격자의 눈으로 보는<br>8단계 취약점 분석</h2></div><p>Red Team은 공격자의 관점에서 약점을 찾는 활동입니다. 모의침투 수행 표준인 PTES에 따라 8단계로 진행하며, 자가진단과 마찬가지로 단계마다 실행과 승인을 거칩니다.</p></div>
+  <ol class="pd-steps c4">
+    <li><b>사전 협의·범위 정의</b><p>대상, 기간, 허용 범위, 비상 연락 체계를 정합니다. 모든 활동은 여기서 합의한 범위 안에서만 이루어집니다.</p><span class="who h">시스템 소유자의 사전 승인</span></li>
+    <li><b>정보 수집·정찰</b><p>대상의 공개 정보와 구성 정보를 수집합니다.</p><span class="who">AI 에이전트</span></li>
+    <li><b>위협 모델링·공격 계획</b><p>예상 공격 경로와 시나리오를 세웁니다.</p><span class="who">AI 에이전트</span></li>
+    <li><b>취약점 스캐닝·분석</b><p>도구와 분석으로 취약점을 식별합니다. 대상에 부하를 줄 수 있는 능동 스캔은 별도의 승인 토큰이 있어야 실행됩니다.</p><span class="who h">능동 스캔은 승인 필요</span></li>
+    <li><b>익스플로잇</b><p>찾은 취약점이 실제로 악용 가능한지 검증합니다.</p><span class="who">AI 에이전트</span></li>
+    <li><b>후속 익스플로잇</b><p>침투가 이루어졌을 때의 영향 범위를 평가합니다.</p><span class="who">AI 에이전트</span></li>
+    <li><b>보고</b><p>발견 사항과 조치 방안을 모의침투 보고서로 정리합니다.</p><span class="who">AI 에이전트</span></li>
+    <li><b>재진단·검증</b><p>조치가 끝난 뒤 취약점이 해소되었는지 다시 확인합니다.</p><span class="who">AI 에이전트</span></li>
+  </ol>
+  <div class="pd-legend"><span>AI 에이전트가 수행하고, 단계가 끝날 때마다 책임자가 승인</span><span class="h">사전 합의·별도 승인이 필요한 지점</span></div>
+  <p class="pd-note">모의침투는 대상 시스템 소유자의 사전 서면 승인을 받은 범위 안에서만 수행합니다. 승인 없이 타인의 시스템을 점검하는 행위는 관련 법령에 따라 처벌될 수 있습니다. 플랫폼의 점검 기능은 허용 목록에 등록된 대상만 받아들입니다. 운영 중인 서비스는 영향이 적은 시간대에 수행하고 비상 연락 체계를 미리 갖추어야 합니다.</p>
+</div></section>
+
+<!-- 주요 기능 -->
+<section class="sec"><div class="wrap pd-anchor" id="features">
+  <div class="sec-h"><div><span class="kicker">Features</span><h2>진단을 믿고 맡기기 위한<br>다섯 가지 장치</h2></div><p>AI가 수행한다는 것만으로는 충분하지 않습니다. 누가 무엇을 했는지 나뉘어 있고, 사람이 통제하며, 근거 없는 내용은 채우지 않도록 설계했습니다.</p></div>
+  <div class="rf">
+    <article class="lead"><h3>역할이 나뉜 14종의 전문 에이전트</h3>
+      <p>한 AI가 모든 일을 하지 않습니다. 실제 컨설팅 팀처럼 역할을 나눈 에이전트가 각자 맡은 단계를 수행하고, 조율 역할의 오케스트레이터가 순서와 승인 절차를 관리합니다. 에이전트별 역할과 담당 단계는 화면에서 확인할 수 있습니다.</p>
+      <ul><li>컨설팅 5종 — 총괄 PM · 기술 리드 · 보안 컨설턴트 · 모의해킹 전문가 · QA/감리</li><li>Red Team 9종 — 리더 · 웹/API · 인프라/네트워크 · 클라우드</li><li>AI/LLM · 모바일/IoT · 소셜 엔지니어링</li><li>자율 모의침투 결과 분석 · 보고서/QA</li></ul></article>
+    <article><h3>사람의 승인 게이트</h3><p>단계가 끝날 때마다 책임자의 검토를 기다립니다. AI의 산출물은 사람이 확인한 뒤에만 확정됩니다.</p><ul><li>검토 의견과 함께 승인 또는 반려</li><li>승인 이력의 감사 기록</li><li>진행 상태의 저장과 복원</li></ul></article>
+    <article><h3>자산 자동 발견과 누락 점검</h3><p>무엇을 보호해야 하는지부터 파악합니다. 자산 대장과 실제 점검 결과를 대조해 빠진 부분을 알려 줍니다.</p><ul><li>승인된 내부망 대역의 주기적 탐색</li><li>미점검·점검 노후·분류 누락·사라진 자산 표시</li><li>발견한 장비를 진단 자산 목록으로 가져오기</li></ul></article>
+    <article><h3>실제 도구로 하는 점검</h3><p>문서 검토에 그치지 않고 대상 시스템을 직접 점검해 결과를 취약점 목록에 반영합니다.</p><ul><li>포트 점검 · SSL 점검 · DNS 열거</li><li>허용 목록에 있는 대상만 점검</li><li>확인되지 않은 CVE·CVSS는 「미확인」으로 표시</li></ul></article>
+    <article><h3>조직 안에서만 도는 AI</h3><p>모든 구성 요소가 조직 내부 설비에 설치되고, 추론은 내부의 로컬 LLM이 수행합니다.</p><ul><li>온프레미스 설치, 외부 클라우드 비의존</li><li>주 엔진과 예비 엔진의 자동 전환</li><li>한국어·영어·일본어·중국어 화면</li></ul></article>
+  </div>
+</div></section>
+
+<!-- 결과물 -->
+<section class="sec soft"><div class="wrap pd-anchor" id="output">
+  <div class="sec-h"><div><span class="kicker">Deliverables</span><h2>검토를 거쳐<br>손에 남는 문서</h2></div><p>단계마다 쌓인 결과가 보고서로 묶입니다. 실무자가 고쳐 쓸 문서, 경영진에게 설명할 문서, 감사에서 보여 줄 기록이 함께 남습니다.</p></div>
+  <div class="pd-tw"><table class="pd-table"><thead><tr><th scope="col">결과물</th><th scope="col">담기는 내용</th><th scope="col">쓰임새</th></tr></thead><tbody>
+    <tr><th scope="row">최종 보고서 <span class="st">DOCX · PDF</span></th><td>프로젝트 개요, 현황 분석, 갭 분석, 정보자산 분류, 위험 평가, 보안 대책, 정책 체계, 취약점 진단, 이행 로드맵, 통합 품질검증의 10개 장</td><td>내부 개선의 기준 문서. 편집본으로 보완하고 확정본으로 보관합니다.</td></tr>
+    <tr><th scope="row">경영진 보고서 <span class="st">DOCX · PDF</span></th><td>현재 보안 수준, 주요 위험과 사업 영향, 필요한 투자와 이행 로드맵의 요약</td><td>경영진·이사회 보고와 투자 우선순위 결정</td></tr>
+    <tr><th scope="row">모의침투 보고서</th><td>8단계 수행 결과, 발견한 취약점과 심각도, 조치 방안, 재진단 결과</td><td>조치 담당자의 작업 목록, 다음 점검과의 비교</td></tr>
+    <tr><th scope="row">위험 등록부·이행 로드맵</th><td>위험별 등급과 처리 방침(감소·회피·전가·수용), 긴급·단기·중기·장기로 나눈 이행 과제</td><td>개선 진행 상황의 관리</td></tr>
+    <tr><th scope="row">승인 기록</th><td>단계별 승인·반려 이력과 검토 의견</td><td>사람이 관리·감독했다는 감사 증빙</td></tr>
+    <tr><th scope="row">통합 품질검증 결과</th><td>지시 방식 비교(A/B), 전 구간 동작 점검(E2E), 장애 상황 복원력(Chaos) 검증 결과</td><td>「AI의 결과를 믿을 수 있는가」에 답하는 근거. 최종 보고서에 함께 실립니다.</td></tr>
+  </tbody></table></div>
+  <p class="pd-note">산출물은 자가진단과 내부 개선을 위한 자료이며, ISMS·ISMS-P·ISO 27001 등 공식 인증 심사나 법정 점검을 대신하지 않습니다. AI가 작성한 내용은 초안이므로 책임자가 수치와 표현을 직접 검토해야 합니다. 보고서 파일은 승인이 끝나지 않은 상태에서도 만들 수 있으므로, 외부에 제출하기 전에 모든 단계가 승인되었는지 확인해야 합니다.</p>
+</div></section>
+
+<!-- One Cycle 안에서의 자리 (이 구역의 pd-loop 와 pd-nav 는 다섯 화면 공통: 고치지 않는다) -->
+<section class="sec"><div class="wrap pd-anchor" id="cycle">
+  <div class="sec-h"><div><span class="kicker">In the cycle</span><h2>One Cycle 안에서<br>03 보안 분석·수정을 맡습니다</h2></div><p>품질 진단을 마친 플랫폼을 넘겨받아 보안 관점에서 다시 살피고, 문제가 되는 사안을 고친 내역과 함께 형식 검증 단계로 넘깁니다. 운영 중 ARGUS가 경보를 올리면 이 단계의 재진단이 다시 호출됩니다.</p></div>
+  <ol class="pd-loop" aria-label="One Cycle 여섯 단계">
+    <li><div class="cell"><i>01</i><b>개발</b><span>AI Agent Platform</span></div></li>
+    <li><a class="cell" href="/a3sc/ISMA3SC003M6.do"><i>02</i><b>품질 진단</b><span>WDLAB-LLMOps</span></a></li>
+    <li class="on" aria-current="step"><div class="cell"><i>03</i><b>보안 분석·수정</b><span>SSC</span></div></li>
+    <li><a class="cell" href="/a3sc/ISMA3SC003M8.do"><i>04</i><b>형식 검증</b><span>Proof-Skills</span></a></li>
+    <li><a class="cell" href="/a3sc/ISMA3SC003M9.do"><i>05</i><b>운영 감시</b><span>ARGUS</span></a></li>
+    <li><a class="cell" href="/a3sc/ISMA3SC003M10.do"><i>06</i><b>지식 자산화</b><span>MYELIN</span></a></li>
+  </ol>
+  <div class="pd-io">
+    <div><small>앞 단계에서 받는 것</small><b>품질 스코어카드와 finding 목록</b><span>WDLAB-LLMOps가 진단한 빌드와 그 실행 기록에서 나온 발견 사항이 보안 분석의 출발점이 됩니다.</span></div>
+    <div><small>이 단계가 하는 일</small><b>자가진단, 취약점 분석, 수정</b><span>ISO 27001:2022 기반 6단계 자가진단과 PTES 8단계 Red Team 분석을 수행하고, 발견한 사안을 조치한 뒤 재진단으로 확인합니다.</span></div>
+    <div><small>다음 단계로 넘기는 것</small><b>취약점 분석 보고서와 개선 이행 내역</b><span>수정이 실제로 유효한지는 Proof-Skills의 형식 검증이 확인합니다. 단계별 승인 기록은 감사 증빙으로 남습니다.</span></div>
+  </div>
+  <nav class="pd-nav" aria-label="다른 플랫폼">
+    <a class="prev" href="/a3sc/ISMA3SC003M6.do"><small>← 이전 단계 · 02 품질 진단</small><b>WDLAB-LLMOps</b></a>
+    <a class="home" href="/a3sc/ISMA3SC003M5.do#stages"><small>전체 흐름 보기</small><b>One Cycle Dev. Framework</b></a>
+    <a class="next" href="/a3sc/ISMA3SC003M8.do"><small>다음 단계 · 04 형식 검증 →</small><b>Proof-Skills</b></a>
+  </nav>
+</div></section>
+
+<!-- 용어 풀이 · 자주 묻는 질문 -->
+<section class="sec soft"><div class="wrap pd-anchor" id="terms">
+  <div class="sec-h"><div><span class="kicker">Glossary</span><h2>처음 보는 말,<br>쉽게 풀어 드립니다</h2></div><p>이 화면에 나오는 용어를 전공자가 아니어도 읽을 수 있게 정리했습니다.</p></div>
+  <dl class="pd-terms">
+    <div><dt>ISO 27001<small>정보보안 경영시스템 국제 표준</small></dt><dd>조직이 정보를 안전하게 관리하기 위해 갖추어야 할 체계를 정한 국제 표준입니다. 2022년 개정판의 부속서 A는 93개 통제항목을 제시합니다.</dd></div>
+    <div><dt>통제항목<small>Control</small></dt><dd>위험을 줄이기 위해 조직이 갖추어야 할 보안 조치 하나하나를 말합니다. 조직·인적·물리적·기술적 통제의 네 범주로 나뉩니다.</dd></div>
+    <div><dt>갭 분석<small>Gap Analysis</small></dt><dd>통제항목별로 현재 수준과 목표 수준의 차이를 따져 보는 일입니다. 차이가 큰 항목이 먼저 고칠 대상입니다.</dd></div>
+    <div><dt>위험 평가<small>Risk Assessment</small></dt><dd>어떤 위협이 어떤 약점을 이용해 피해를 줄 수 있는지 찾아, 발생 가능성과 영향도로 등급을 매기는 일입니다.</dd></div>
+    <div><dt>Red Team<small>레드팀</small></dt><dd>공격자의 관점에서 시스템의 약점을 찾는 활동, 또는 그 일을 하는 조직입니다.</dd></div>
+    <div><dt>모의침투<small>Penetration Test</small></dt><dd>허락을 받고 실제 공격과 같은 방법으로 시스템을 시험해, 약점이 정말 악용될 수 있는지 확인하는 점검입니다.</dd></div>
+    <div><dt>PTES<small>Penetration Testing Execution Standard</small></dt><dd>모의침투를 어떤 순서로 수행해야 하는지 정한 수행 표준입니다. SSC는 이를 8단계로 구성했습니다.</dd></div>
+    <div><dt>승인 게이트<small>Human-in-the-Loop, HITL</small></dt><dd>자동화된 절차의 중요한 지점마다 사람이 결과를 검토해 승인하거나 반려하는 장치입니다. 승인 전에는 다음 단계로 넘어가지 않습니다.</dd></div>
+    <div><dt>AI 에이전트<small>AI Agent</small></dt><dd>총괄 PM, 보안 컨설턴트처럼 역할을 하나씩 맡아 일하는 AI 작업자입니다.</dd></div>
+    <div><dt>로컬 LLM<small>Local Large Language Model</small></dt><dd>조직 내부 서버에서 동작하는 AI 언어 모델입니다. 질문과 자료가 외부 AI 서비스로 전송되지 않습니다.</dd></div>
+    <div><dt>온프레미스<small>On-premises</small></dt><dd>외부 클라우드가 아니라 조직 내부 설비에 직접 설치해 운영하는 방식입니다.</dd></div>
+    <div><dt>CVE · CVSS<small>취약점 식별 번호 · 심각도 점수</small></dt><dd>CVE는 공개된 취약점에 붙는 고유 번호이고, CVSS는 그 취약점이 얼마나 심각한지를 나타내는 점수입니다.</dd></div>
+  </dl>
+  <h3 class="pd-faq-h">자주 묻는 질문</h3>
+  <div class="pd-faq">
+    <details><summary>진단 자료가 조직 밖으로 나가지 않습니까?</summary><p>플랫폼은 조직 내부에 설치되어 내부의 AI 추론 엔진만 사용하도록 설계되어 있습니다. 진단 자료, AI의 추론 결과, 산출물이 모두 조직 네트워크 안에서 처리됩니다. 다만 관리자가 AI 엔진의 접속 주소를 외부 서비스로 바꾸면 이 원칙이 깨지므로, 설정은 내부 주소로 유지하고 정기적으로 확인해야 합니다.</p></details>
+    <details><summary>사람은 무엇을 해야 합니까?</summary><p>범위와 책임자를 정하고, 단계마다 결과를 읽어 승인하거나 반려하며, AI가 작성한 내용을 조직의 실제 상황에 맞게 보완합니다. 모의침투에 앞서 대상 시스템 소유자의 승인을 받는 일과, 발견한 문제를 실제로 조치하는 일도 사람의 몫입니다.</p></details>
+    <details><summary>AI가 틀린 내용을 쓰면 어떻게 됩니까?</summary><p>AI의 결과는 초안이며 실제와 다를 수 있습니다. 그래서 단계마다 승인 게이트를 두었고, 반려하면 같은 단계를 다시 수행합니다. 취약점 번호나 심각도 점수처럼 근거가 확인되지 않은 정보는 임의로 채우지 않고 「미확인」으로 표시해, 담당자가 직접 확인하도록 합니다.</p></details>
+    <details><summary>모의침투가 운영 중인 서비스에 영향을 주지 않습니까?</summary><p>점검은 사전에 합의한 대상과 시간에만 수행합니다. 플랫폼은 허용 목록에 없는 대상을 점검하지 않으며, 대상에 부하를 줄 수 있는 능동 스캔은 책임자의 승인 절차로 발급된 승인 토큰이 있어야 실행됩니다. 운영 중인 서비스는 영향이 적은 시간대에 수행하고 비상 연락 체계를 미리 갖추기를 권합니다.</p></details>
+    <details><summary>이것으로 ISMS나 ISO 27001 인증을 받을 수 있습니까?</summary><p>받을 수 없습니다. SSC는 인증을 준비하고 스스로 수준을 진단하기 위한 도구입니다. 인증은 공인된 심사 기관의 심사를 통해서만 취득할 수 있습니다. 공식 심사 전에 스스로 점검하는 사전 감사 용도로는 활용할 수 있습니다.</p></details>
+    <details><summary>보안 컨설팅이 필요 없어집니까?</summary><p>그렇지 않습니다. SSC는 반복되는 진단과 문서 작업을 덜어 주고 점검 주기를 짧게 해 주지만, 위험을 해석하고 우선순위를 정하는 판단과 인증 대응은 컨설턴트의 일입니다. 에이쓰리시큐리티는 SSC를 컨설팅을 뒷받침하는 도구로 씁니다.</p></details>
+    <details><summary>무엇을 보증하고, 무엇은 보증하지 않습니까?</summary><p>절차가 표준에 맞게 진행되었고 단계마다 사람이 검토했다는 기록은 남습니다. 그러나 진단을 통과했다는 것이 취약점이 없다는 뜻은 아닙니다. 결과는 점검한 범위와 시점에 한정되며, 시스템이 바뀌면 다시 진단해야 합니다.</p></details>
+  </div>
+</div></section>
+
+<!-- 도입 문의 (기존 화면과 같은 부품) -->
+<section class="sec s"><div class="wrap"><div class="cta pd-anchor" id="contact"><div><h2>우리 조직의 보안 수준, 직접 확인해 보시겠습니까?</h2><p>조직 규모와 환경에 맞는 자가진단 범위와 설치 구성을 함께 정해 드립니다.</p><div class="actions" style="margin-top:34px"><a class="pill white" href="mailto:hello@a3sc.co.kr">hello@a3sc.co.kr <span class="ar">→</span></a></div></div><div class="num">대표전화<b>02-6952-2511</b></div></div></div></section>
+
+<script>/* 서브 메뉴: 보고 있는 구역을 표시 */(function(){var nav=document.getElementById('pd-subnav');if(!nav||!('IntersectionObserver' in window))return;var as=nav.querySelectorAll('a'),map={};
+for(var i=0;i<as.length;i++){var el=document.getElementById(as[i].getAttribute('href').slice(1));if(el)map[el.id]=as[i]}
+var io=new IntersectionObserver(function(es){for(var i=0;i<es.length;i++)if(es[i].isIntersecting){for(var j=0;j<as.length;j++)as[j].className='';map[es[i].target.id].className='on'}},{rootMargin:'-30% 0px -60% 0px'});
+for(var id in map)io.observe(document.getElementById(id))})()</script>
+</main>
+
+
+
+
+
+<footer class="gf"><div class="wrap">
+  <div class="top"><div><img src="/resources/images/A3/renewal/img/foot_logo.png" alt="A3 SECURITY"><p>1999년 국내 최초의 정보보안 컨설팅 기업. 이제 보안을 아는 AI를 만듭니다.</p></div>
+  <div><h5>회사소개</h5><ul><li><a href="/a3sc/ISMA3SC002M1.do">회사개요</a></li><li><a href="/a3sc/ISMA3SC002M2.do">CEO 인사말</a></li><li><a href="/a3sc/ISMA3SC002M3.do">연혁</a></li><li><a href="/a3sc/ISMA3SC002M4.do">인재상</a></li><li><a href="/a3sc/ISMA3SC002M5.do">찾아오시는 길</a></li></ul></div>
+  <div><h5>AI 플랫폼</h5><ul><li><a href="/a3sc/ISMA3SC003M4.do">개요</a></li><li><a href="/a3sc/ISMA3SC003M4.do#lineup">플랫폼 9종</a></li><li><a href="/a3sc/ISMA3SC003M5.do">One Cycle Framework</a></li><li class="fam-off"><a>A3 AI 포털 ↗</a></li></ul></div>
+  <div><h5>보안 서비스</h5><ul><li><a href="/a3sc/ISMA3SC003M1.do">보안컨설팅</a></li><li><a href="/a3sc/ISMA3SC003M2.do">보안관제</a></li><li><a href="/a3sc/ISMA3SC003M3.do">보안솔루션</a></li></ul></div>
+  <div><h5>정보센터</h5><ul><li><a href="/a3sc/ISMA3SC004M1.do?brdType=N">공지사항</a></li><li><a href="/a3sc/ISMA3SC004M1.do?brdType=C">뉴스클리핑</a></li><li><a href="/a3sc/ISMA3SC004M1.do?brdType=T">보안동향</a></li><li><a href="/a3sc/ISMA3SC004M1.do?brdType=R">보안권고</a></li><li><a href="/a3sc/ISMA3SC005M1.do">사이트맵</a></li></ul></div></div>
+  <div class="mid"><div class="fnb"><ul class="links"><li><a href="/a3sc/ISMA3SC002M1.do">회사소개</a></li><li><a href="/a3sc/ISMA3SC005M2.do" class="em">개인정보처리방침</a></li><li><a href="/a3sc/ISMA3SC002M5.do">오시는길</a></li><li><a href="/a3sc/ISMA3SC005M1.do">사이트맵</a></li></ul>
+  <details class="family fam-off"><summary>패밀리 사이트</summary><ul><li><a>A3 AiNex &amp; AgentForge</a></li><li><a>AIALBM</a></li><li><a>AiNex</a></li><li><a>AI Cluster Master</a></li><li><a>ADE</a></li><li><a>AEGIS</a></li><li><a>AgentForge</a></li><li><a>AIMES</a></li><li><a>AIMES Eleven</a></li><li><a>Nexus AI</a></li><li><a>TruthLens</a></li></ul></details></div>
+  <ul class="sns"><li class="blog"><a href="https://blog.naver.com/a3security" target="_blank" rel="noopener" aria-label="네이버 블로그"><img src="/resources/images/A3/renewal/img/sns/foot_blog.png" alt=""></a></li><li class="facebook"><a href="https://www.facebook.com/hello.a3" target="_blank" rel="noopener" aria-label="페이스북"><img src="/resources/images/A3/renewal/img/sns/foot_facebook.png" alt=""></a></li><li class="twitter"><a href="https://twitter.com/a3security_info" target="_blank" rel="noopener" aria-label="트위터"><img src="/resources/images/A3/renewal/img/sns/foot_twitter.png" alt=""></a></li></ul></div>
+  <div class="bot"><div><span>(주)에이쓰리시큐리티</span><span>대표자 한재호</span><span>사업자등록번호 172-81-00570</span><span>통신판매신고번호 제2011-서울금천-0931호</span><br><span>07281 서울 영등포구 선유로9길 10, 문래 SK V1 center 1710-11호</span><span>02-6952-2511</span><span>hello@a3sc.co.kr</span></div>
+  <div>© A3SECURITY. ALL RIGHTS RESERVED.</div></div>
+  </div></footer><script>/* 패밀리 사이트: 바깥을 누르면 닫는다 */document.addEventListener('click',e=>{const f=document.querySelector('.gf .family');if(f&&f.open&&!f.contains(e.target))f.open=false})</script>
+
+</body>
+</html>
